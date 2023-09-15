@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# SISTEMA DE CONTROLE FINANCEIRO - IGREJA BATISTA AMAR
 
 `Análise e Desenvolvimento de Sistemas`
 
