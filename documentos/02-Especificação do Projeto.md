@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="documentos/02-Especificação do Projeto.md"> Documentação de Contexto</a></span>
+<span style="color:red">Pré-requisitos: <a href="documentos/01-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
 A Igreja Batista Amar, ciente da importância da transparência e eficiência na gestão financeira, enfrenta desafios significativos em seu atual processo manual de controle financeiro. A equipe responsável encontra dificuldades em lidar com a volumosa quantidade de transações, que incluem ofertas, dízimos, doações, bem como diversas despesas associadas à manutenção do templo, funcionários e encargos legais.
 
