@@ -1,4 +1,4 @@
-# SISTEMA DE CONTROLE FINANCEIRO - IGREJA BATISTA AMAR
+# Sistema Controle Financeiro - IGREJA BATISTA AMAR
 
 `Análise e Desenvolvimento de Sistemas`
 
