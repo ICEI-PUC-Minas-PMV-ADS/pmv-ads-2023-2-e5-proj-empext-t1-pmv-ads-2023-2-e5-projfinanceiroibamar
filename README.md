@@ -2,22 +2,24 @@
 
 `Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador`
 
-`SEMESTRE`
+`Quinto período`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+<p align="justify">A Igreja Batista Amar, em sua busca pela transparência e eficiência na administração dos recursos, identificou desafios significativos em sua gestão financeira. Neste contexto, surge a necessidade premente de modernização e otimização dos processos. Propomos, assim, a implementação do Projeto de Gestão da Tesouraria, uma solução que automatizará o controle financeiro, conferindo agilidade e simplificando a elaboração dos fluxos de entrada e saída de recursos.</p>
+
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Mário César de Souza Fernandes
+* Marcelo dos Santos Farias
+* Márcia Maria de Paula Ferreira
+* Ruver Clacyus Oliveira Caldeira
+* Moisés Hastenraiter Da Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+* Sandra Maria Silveira
 
 ## Instruções de utilização
 
