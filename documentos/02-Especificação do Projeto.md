@@ -14,10 +14,8 @@ o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a s
 
 ## Project Model Canvas
 
-Colocar a imagem do modelo construído apresentando a proposta de solução.
+![Caso de Uso](img/casocanvas.png)
 
-> **Links Úteis**:
-> Disponíveis em material de apoio do projeto
 
 ## Requisitos
 
@@ -27,13 +25,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |  ID  | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001|Registro de Receitas e Despesas: O sistema deve permitir o registro detalhado de todas as receitas e despesas da igreja, categorizando-as de acordo com as subpartes especificadas.| ALTA | 
-|RF-002|Automação de Cálculos: O sistema deve realizar cálculos automáticos para determinar saldos iniciais, entradas, saídas e saldos finais, minimizando erros humanos.| ALTA | 
-|RF-003|Geração de Relatórios: Deve ser possível gerar relatórios financeiros detalhados, incluindo demonstrativos de entradas e saídas por categoria, resumos financeiros e saldos bancários.| ALTA |
-|RF-004|Controle de Acesso: O sistema deve fornecer controle de acesso com diferentes níveis de permissão para garantir que apenas usuários autorizados possam inserir ou modificar dados financeiros.| ALTA |
-|RF-005|Armazenamento Seguro: Os dados financeiros devem ser armazenados de forma segura, protegidos por medidas de segurança robustas para evitar acesso não autorizado.| ALTA |
-|RF-006|Backup e Recuperação: Deve haver uma funcionalidade de backup regular e a capacidade de recuperar dados em caso de falha do sistema.| ALTA |
-|RF-007|Notificações Automáticas: O sistema deve enviar notificações automáticas para os responsáveis pela gestão financeira da igreja, informando sobre saldos críticos, transações importantes ou obrigações fiscais pendentes.| MÉDIA |
+|RF-001|Fazer login.| ALTA | 
+|RF-002|Gestão de usuarios.| ALTA | 
+|RF-003|Gestão de contas.| ALTA |
+|RF-004|Gestão categorias de receitas e despesas.| ALTA |
+|RF-005|Gestão de membros.| ALTA |
+|RF-006|Gestão das Receitas.| ALTA |
+|RF-007|Gestão de fornecedores.| ALTA |
+|RF-008|Gestão de despesas.| ALTA |
+|RF-009|Gestão de usuarios .| ALTA |
+|RF-010|Geração de Relatórios: Deve ser possível gerar relatórios financeiros detalhados, incluindo demonstrativos de entradas e saídas por categoria, resumos financeiros e saldos bancários.| ALTA |
 
 ### Requisitos não Funcionais
 
@@ -76,27 +77,12 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 > - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
+![Caso de Uso](img/caso_uso.png)
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
 
 ## Modelo ER (Projeto Conceitual)
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
-
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
-
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+![Esquema Relacional](img/modelo_dados.jpg)
 
 ## Projeto da Base de Dados
 
