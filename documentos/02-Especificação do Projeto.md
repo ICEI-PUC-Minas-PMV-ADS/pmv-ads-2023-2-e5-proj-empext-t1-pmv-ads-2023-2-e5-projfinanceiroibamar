@@ -14,7 +14,7 @@ o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a s
 
 ## Project Model Canvas
 
-![Caso de Uso](img/casocanvas.png)
+![Caso de Uso](img/canvas.png)
 
 
 ## Requisitos
