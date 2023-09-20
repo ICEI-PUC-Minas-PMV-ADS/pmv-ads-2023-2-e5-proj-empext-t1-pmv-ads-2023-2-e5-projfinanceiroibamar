@@ -1,6 +1,6 @@
 # Introdução
 
-A Igreja Batista Amar, em sua busca pela transparência e eficiência na administração dos recursos, identificou desafios significativos em sua gestão financeira. Neste contexto, surge a necessidade premente de modernização e otimização dos processos. Propomos, assim, a implementação do Projeto de Gestão da Tesouraria, uma solução que automatizará o controle financeiro, conferindo agilidade e simplificando a elaboração dos fluxos de entrada e saída de recursos..
+A Igreja Batista Amar, em sua busca pela transparência e eficiência na administração dos recursos, identificou desafios significativos em sua gestão financeira. Neste contexto, surge a necessidade premente de modernização e otimização dos processos. Propomos, assim, a implementação do Projeto de Gestão da Tesouraria, uma solução que automatizará o controle financeiro, conferindo agilidade e simplificando a elaboração dos fluxos de entrada e saída de recursos.
  
 
 ## Problema
