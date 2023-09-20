@@ -1,9 +1,9 @@
 # Introdução
 
-<p>A Igreja Batista Amar, em sua busca pela transparência e eficiência na administração dos recursos, identificou desafios significativos em sua gestão financeira. Neste contexto, surge a necessidade premente de modernização e otimização dos processos. Propomos, assim, a implementação do Projeto de Gestão da Tesouraria, uma solução que automatizará o controle financeiro, conferindo agilidade e simplificando a elaboração dos fluxos de entrada e saída de recursos.
+A Igreja Batista Amar, em sua busca pela transparência e eficiência na administração dos recursos, identificou desafios significativos em sua gestão financeira. Neste contexto, surge a necessidade premente de modernização e otimização dos processos. Propomos, assim, a implementação do Projeto de Gestão da Tesouraria, uma solução que automatizará o controle financeiro, conferindo agilidade e simplificando a elaboração dos fluxos de entrada e saída de recursos.
  
-## Desafios Identificados:
 
+## Problema
 ### Opacidade na Prestação de Contas: 
 O modelo atual de gestão dificulta o acesso a informações detalhadas sobre as finanças da igreja. Esta falta de transparência pode minar a confiança e prejudicar a prestação de contas aos membros e colaboradores.
 ### Lentidão na Administração Financeira: 
@@ -19,55 +19,32 @@ A igreja recebe recursos provenientes de diversas fontes, cada uma com sua final
 ### Conformidade com Normas Legais e Fiscais:
 O cumprimento das obrigações legais e fiscais torna-se uma empreitada árdua sem um sistema que automatize e assegure a correta apuração e pagamento de impostos e outras exigências contábeis.
 
-## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 
 ## Objetivos
 O Projeto de Gestão da Tesouraria da Igreja Batista Amar tem como objetivos principais:
-1.Automatização da Gestão Financeira: Implementar um sistema que automatize o registro de ofertas, dízimos, doações e despesas, 
-2.Transparência e Prestação de Contas: Garantir que os membros da igreja e colaboradores tenham acesso fácil a informações detalhadas sobre as finanças, promovendo a transparência e a confiança na administração dos recursos.
-3.Agilidade e Eficiência: Agilizar a administração financeira da igreja, reduzindo o tempo gasto em tarefas administrativas e permitindo que a equipe se concentre em atividades mais estratégicas.
-4.Precisão e Integridade dos Registros: Minimizar a possibilidade de erros contábeis, garantindo a integridade e precisão dos registros financeiros.
-5.Facilitação na Elaboração de Relatórios: Possibilitar a geração automática de relatórios financeiros claros e organizados, simplificando a elaboração de fluxos de entrada e saída de recursos.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+<ol>
+ <li>Automatização da Gestão Financeira: Implementar um sistema que automatize o registro de ofertas, dízimos, doações e despesas</li>
+ <li>Transparência e Prestação de Contas: Garantir que os membros da igreja e colaboradores tenham acesso fácil a informações detalhadas sobre as finanças, promovendo a transparência e a confiança na administração dos recursos.</li>
+ <li>Agilidade e Eficiência: Agilizar a administração financeira da igreja, reduzindo o tempo gasto em tarefas administrativas e permitindo que a equipe se concentre em atividades mais estratégicas.</li>
+ <li>Precisão e Integridade dos Registros: Minimizar a possibilidade de erros contábeis, garantindo a integridade e precisão dos registros financeiros.</li>
+ <li>Facilitação na Elaboração de Relatórios: Possibilitar a geração automática de relatórios financeiros claros e organizados, simplificando a elaboração de fluxos de entrada e saída de recursos.</li>
+</ol>
 
 ## Justificativa
 A necessidade de automatização e modernização na gestão financeira da Igreja Batista Amar é evidente diante dos desafios previamente mencionados. Fazer todo o procedimento manualmente não apenas consome recursos valiosos de tempo, mas também gera riscos significativos, desde erros contábeis na prestação de contas.
 
 A aplicação do Projeto de Gestão da Tesouraria visa superar essas dificuldades, proporcionando uma solução abrangente e eficaz. Com a automatização, os registros financeiros serão mais precisos, os relatórios serão gerados com facilidade e a administração dos recursos será mais eficiente, permitindo que a igreja atinja seus objetivos com maior eficácia.
 
-## Público-Alvo
-
-1. Membros da Igreja Batista Amar.
-2. Colaboradores e voluntários envolvidos na administração financeira da igreja.
-3. Líderes e pastores que desejam acesso rápido e preciso às informações financeiras da igreja.
-A solução será projetada para ser intuitiva e de fácil utilização, atendendo às necessidades de todos os envolvidos na gestão financeira da igreja.
-
-É importante ressaltar que, mesmo sendo um público-alvo definido, a aplicação pode ser utilizada por qualquer pessoa que esteja em busca de serviços de manutenção e reparos em sua residência, independentemente de gênero, idade ou localização geográfica.
-<h3>Responsáveis pelo gerenciamento e criação da aplicação (podem ou não ser os mesmos), incluem:</h3>
-<li>Desenvolvedores do aplicativo;</li>
-<li>Pessoas responsáveis pelo gerenciamento do aplicativo, incluindo lucros e despesas que o site possa ter;</li>
-<li>Proprietario do aplicativo;</li>
-<li>Financiadores do aplicativo;</li>
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Relação com a Extensão Universitária
 
-Relacionar a situação-problema da organização com o impacto social esperado com a implantação do sistema sociotécnico.
+Este projeto está diretamente vinculado à Extensão Universitária e visa atender à necessidade de modernização e automatização na gestão financeira da Igreja Batista Amar. Utilizaremos os conhecimentos adquiridos nos períodos anteriores do curso de Análise e Desenvolvimento de Sistemas na Pontifícia Universidade Católica de Minas Gerais para abordar e resolver este problema de forma prática, indo além da teoria apresentada em sala de aula e dos materiais didáticos.
+
+A proposta consiste em desenvolver um sistema de gestão de tesouraria que auxilie a igreja nesta tarefa. Com a automatização, os registros financeiros serão mais precisos, os relatórios serão gerados com facilidade e a administração dos recursos será consideravelmente mais eficiente. Dessa forma, a igreja poderá alcançar seus objetivos de forma mais eficaz e assertiva. Esta abordagem reflete as competências desenvolvidas ao longo do curso, incluindo o pensamento computacional, a resolução de problemas e a compreensão da arquitetura de software, especialmente o padrão MVC.
 
 ## Descrição do Parceiro
 
-Apresente uma descrição resumida sobre a organização onde o projeto será desenvolvido para que possa ser compreendido o cenário sistema sociotécnico.
+O Parceiro é uma vibrante igreja localizada no coração do Estado de Manaus. Com uma comunidade acolhedora e comprometida, a igreja busca promover valores de fé, solidariedade e crescimento espiritual. Por meio de atividades diversificadas, cultos inspiradores e projetos sociais impactantes, o Parceiro se dedica a fortalecer laços entre seus membros e a contribuir positivamente para a sociedade. Sua abordagem inclusiva e compromisso com a excelência no serviço religioso fazem dele um farol de esperança e transformação na região.
+
+
+
