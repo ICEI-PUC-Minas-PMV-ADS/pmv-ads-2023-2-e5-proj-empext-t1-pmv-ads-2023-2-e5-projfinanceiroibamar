@@ -44,7 +44,7 @@ A proposta consiste em desenvolver um sistema de gestão de tesouraria que auxil
 
 ## Descrição do Parceiro
 
-O Parceiro é uma vibrante igreja localizada no coração do Estado de Manaus. Com uma comunidade acolhedora e comprometida, a igreja busca promover valores de fé, solidariedade e crescimento espiritual. Por meio de atividades diversificadas, cultos inspiradores e projetos sociais impactantes, o Parceiro se dedica a fortalecer laços entre seus membros e a contribuir positivamente para a sociedade. Sua abordagem inclusiva e compromisso com a excelência no serviço religioso fazem dele um farol de esperança e transformação na região.
+O Parceiro é uma vibrante igreja localizada no Estado do Amazonas. Com uma comunidade acolhedora e comprometida, a igreja busca promover valores de fé, solidariedade e crescimento espiritual. Por meio de atividades diversificadas, cultos inspiradores e projetos sociais impactantes, o Parceiro se dedica a fortalecer laços entre seus membros e a contribuir positivamente para a sociedade. Sua abordagem inclusiva e compromisso com a excelência no serviço religioso fazem dele um farol de esperança e transformação na região.
 
 
 
