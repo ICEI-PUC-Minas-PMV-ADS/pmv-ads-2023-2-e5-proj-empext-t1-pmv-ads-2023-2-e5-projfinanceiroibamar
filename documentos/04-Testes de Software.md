@@ -41,9 +41,8 @@ Plano de Testes: Funcionalidade de Login
 |------|-----------------------------------------|
 |Requisitos associados | RF-01​​  Usuário fazer login
 |Objetivo do teste | Permitir que o usuário recupere a senha. 
-|Passos | <ol><li> Acessar a página de login. </li> <li> Clicar no link "Esqueci minha senha". </li> <li> Inserir o endereço de e-mail associado à conta. </li> <li>Clicar no botão de recuperação de senha. </li>
-</ol>
-|Critérios de Êxito | <ul> <li>: O sistema deve enviar um e-mail de recuperação de senha para o endereço fornecido e exibir uma mensagem de confirmação. </li> 
+|Passos | <ol><li> Acessar a página de login. </li> <li> Clicar no link "Esqueci minha senha". </li> <li> Inserir o endereço de e-mail associado à conta. </li> <li>Clicar no botão de recuperação de senha. </li></ol>
+|Critérios de Êxito | <ul> <li> O sistema deve enviar um e-mail de recuperação de senha para o endereço fornecido e exibir uma mensagem de confirmação. </li> 
 
 <br>
 
