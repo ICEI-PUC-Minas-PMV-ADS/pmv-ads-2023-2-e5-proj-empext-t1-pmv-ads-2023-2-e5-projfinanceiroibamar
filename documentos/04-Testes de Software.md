@@ -105,15 +105,22 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 
 
-## Ferramentas de Testes
- 
-- Jest
-- Cypress
-- xUnit.net
-- Vscode test Explorer
-
-
 
 # Evidências de Testes de Software
 
-Apresente imagens e/ou vídeos que comprovam que um determinado teste foi executado, e o resultado esperado foi obtido. Normalmente são screenshots de telas, ou vídeos do software em funcionamento.
+# Evidências de Testes de Software
+### CT-01 - CT-01 - Teste de Login com Credenciais Válidas
+![Figura 1](img/ct-01_01.png)
+
+
+![Figura 2](img/ct-01_02.png)
+
+### CT-02 - Teste de Login com Credenciais Inválidas
+![Figura 1](img/ct-02.png)
+
+
+### CT-04 - Teste de Criação de nova conta
+![Figura 1](img/ct-04.png)
+
+### CT-05 - Teste de edição de conta existente
+![Figura 1](img/ct-05.png)
