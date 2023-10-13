@@ -12,8 +12,4 @@ Visão geral da interação do usuário com as funcionalidades que fazem parte d
 https://www.figma.com/file/DjwRKORYkt48l6M7zlk4Jc/Sistema-Financeiro-Igreja-Batista-Amar?type=design&node-id=0-1&mode=design&t=1mYDPasiIVQ2kTbQ-0
 
 ![Tela Inicial](img/telainicialnova.png)
-![Tela Menu](img/telamenu.png)
-![Tela Criar Conta](img/telacriarconta.png)
-![Tela Transaçoes](img/telatransacoes.png)
-![Tela Relatorios](img/telarelatorios.png)
 
