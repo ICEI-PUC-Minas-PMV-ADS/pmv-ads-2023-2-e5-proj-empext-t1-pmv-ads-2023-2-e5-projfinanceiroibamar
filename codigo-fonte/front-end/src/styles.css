@@ -2,8 +2,28 @@
 @import "~font-awesome/css/font-awesome.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import '~mdb-ui-kit/css/mdb.min.css';
+@import '~datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+ul {
+  padding: 0;
+}
 
 body{
-  background-color: #E5E5E5;
-  color: black;
+  background:  #E5E5E5;
+  color: #025159;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
+
+

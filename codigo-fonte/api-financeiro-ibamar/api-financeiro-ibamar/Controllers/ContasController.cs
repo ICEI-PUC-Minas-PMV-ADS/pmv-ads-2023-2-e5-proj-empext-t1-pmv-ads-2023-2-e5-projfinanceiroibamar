@@ -27,6 +27,7 @@ namespace api_financeiro_ibamar.Controllers
             {
                 return NotFound();
             }
+
             return await _context.Contas
                 .ToListAsync();
         }

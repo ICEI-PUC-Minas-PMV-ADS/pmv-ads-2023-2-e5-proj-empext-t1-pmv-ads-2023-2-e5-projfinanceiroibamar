@@ -16,6 +16,7 @@ namespace api_financeiro_ibamar.Services
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new [] {
+                   new Claim(ClaimTypes.Sid, user.Id.ToString()),
                    new Claim(ClaimTypes.NameIdentifier, user.Login),
                    new Claim(ClaimTypes.Name, user.Nome), // User.Identity.Name
                    new Claim(ClaimTypes.Role, user.Role), 

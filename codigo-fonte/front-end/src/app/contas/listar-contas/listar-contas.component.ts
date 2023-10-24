@@ -1,14 +1,19 @@
 import { ContaService } from './../conta.service';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Conta } from '../conta';
 import { AuthService } from 'src/app/auth.service';
+import { Subject } from 'rxjs';
+
+
+
 
 @Component({
   selector: 'app-listar-contas',
   templateUrl: './listar-contas.component.html',
   styleUrls: ['./listar-contas.component.css']
 })
-export class ListarContasComponent {
+
+export class ListarContasComponent implements OnInit {
 
   listaContas: Conta[] = [];
   contaSelecionado!: Conta;
@@ -16,16 +21,30 @@ export class ListarContasComponent {
   tituloModal: string = '';
   tituloBotaoModal: string = '';
 
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any>=new Subject<any>();
+
+
   constructor(
     private contaService: ContaService,
     private authService: AuthService,
     ) { }
 
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
+    this.carregarContas();
+  }
+
+  carregarContas() {
     this.contaService.listar(this.authService.getUsuarioId()).subscribe((listaContas)=> {
       this.listaContas = listaContas;
+      console.log('passou aqui');
+      this.dtTrigger.next(null);
     });
   }
+
 
   prepararContaParaAcao(conta: Conta, acao: string) {
     this.contaSelecionado = conta;
@@ -47,8 +66,6 @@ export class ListarContasComponent {
         });
       }
     }
-
   }
-
 
 }

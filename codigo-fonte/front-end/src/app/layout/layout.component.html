@@ -1,6 +1,7 @@
-<body>
-  <app-navbar></app-navbar>
-  <div class="container-fluid">
+<app-sidebar [openSidebar] = "openSidebar" class = "app-sidebar" [class.sidebar-close]="!openSidebar"></app-sidebar>
+<section class="home-section">
+  <app-navbar (openSidebarEE)="receberOpenSidebar($event)"></app-navbar>
+  <div class="home-view">
     <router-outlet></router-outlet>
   </div>
-</body>
+</section>

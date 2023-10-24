@@ -27,7 +27,7 @@ export class LoginComponent {
                     next: (response) =>{
                       const access_token = JSON.stringify(response);
                       localStorage.setItem('access_token',access_token);
-                      this.router.navigate(['/sistema/principal']);
+                      this.router.navigate(['/home']);
                     },
                     error: (errorResponse) => {
                       console.log(errorResponse);

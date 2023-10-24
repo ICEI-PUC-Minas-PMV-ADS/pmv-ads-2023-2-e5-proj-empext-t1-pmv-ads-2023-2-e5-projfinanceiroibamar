@@ -1,9 +1,85 @@
-
-.navSistema{
-  background-color: #DFFDD5;
+.home-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #025159;
 }
 
-.btnLogin {
-  background-color: #BBF88C;
-  color: #000000;
+.home-header .title {
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
 }
+
+.home-view {
+  /* height: 100%; */
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+.label-hamburger-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.label-hamburger-menu:hover .bar {
+   box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+}
+
+.label-hamburger-menu .bar {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  /* box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4); */
+  border-radius: 1px;
+  transition: 0.4s ease;
+}
+
+.label-hamburger-menu .bar:not(:first-child) {
+  margin-top: 5px;
+}
+
+
+#checkbox-hamburger-menu {
+  display: none;
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar {
+  width: 30px;
+  transform: rotateY(180deg) rotateX(360deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:first-child {
+  transform: translateY(9px) rotate(-90deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:nth-child(2) {
+  transform: translatex(9px) rotate(-90deg);
+}
+
+#checkbox-hamburger-menu:checked + .label-hamburger-menu .bar:nth-child(3) {
+  transform: translatex(-9px) translateY(-9px) rotate(-90deg);
+}
+
+

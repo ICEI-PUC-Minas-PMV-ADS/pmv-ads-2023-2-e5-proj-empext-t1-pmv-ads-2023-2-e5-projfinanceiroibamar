@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth.service';
+import { Component, Output, EventEmitter, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,17 +7,19 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class NavbarComponent {
 
-  
-  constructor(
-    private router: Router,
-    private authService: AuthService
-  ){
 
-   }
+  @Output() openSidebarEE = new EventEmitter();
+  openSidebar: boolean = true;
 
-  logout(){
-    this.authService.encerrarSessao();
-    this.router.navigate(['/home']);
+
+
+
+  modelChangeFn(e: boolean) {
+    this.openSidebar = e;
+    this.openSidebarEE.emit(this.openSidebar)
   }
- 
+
+
+
+
 }

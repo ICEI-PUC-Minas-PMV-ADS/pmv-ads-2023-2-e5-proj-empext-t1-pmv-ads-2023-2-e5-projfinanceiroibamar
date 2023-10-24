@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
-import { RegisterComponent } from './register/register.component';
 import { AuthService } from './auth.service';
 import { TokenInterceptor } from './token.interceptor';
 import { NgxMaskModule } from "ngx-mask";
@@ -20,7 +19,6 @@ import { ContasModule } from './contas/contas.module';
     AppComponent,
     LoginComponent,
     LayoutComponent,
-    RegisterComponent,
     PrincipalComponent,
   ],
   imports: [
@@ -28,9 +26,9 @@ import { ContasModule } from './contas/contas.module';
     HttpClientModule,
     FormsModule,
     NgxMaskModule.forRoot(),
-    ContasModule,
     AppRoutingModule,
-    TemplateModule
+    TemplateModule,
+    ContasModule,
   ],
   providers: [
     AuthService,

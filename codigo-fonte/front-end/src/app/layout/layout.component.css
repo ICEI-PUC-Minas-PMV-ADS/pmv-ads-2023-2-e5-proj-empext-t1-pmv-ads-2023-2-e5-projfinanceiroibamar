@@ -1,0 +1,17 @@
+
+/* Home Section */
+.home-section {
+  position: relative;
+  height: 100vh;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.app-sidebar.sidebar-close ~ .home-section {
+  left: 60px;
+  width: calc(100% - 60px);
+}

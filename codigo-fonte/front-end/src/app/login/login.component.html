@@ -1,5 +1,5 @@
 
-<div class="container2">
+<div class="containerLogin">
 <section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex align-items-center justify-content-center h-100">
@@ -12,15 +12,17 @@
         </div>
         <form #loginForm="ngForm" (submit)="onSubmit();">
           <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" name="username" [(ngModel)]="username" class="form-control form-control-lg" />
-            <label class="form-label" for="username">E-mail</label>
+          <div class="form-outline mb-2">
+
+            <label class="form-label label" for="username">Login</label>
+            <input type="email" name="username" [(ngModel)]="username" class="form-control form-control-lg inputDados" placeholder="digite seu login"/>
           </div>
 
           <!-- Password input -->
-          <div class="form-outline mb-4">
-            <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-lg" />
-            <label class="form-label" for="password">Senha</label>
+          <div class="form-outline mb-2">
+            <label class="form-label label" for="password">Senha</label>
+            <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-lg inputDados" placeholder="digite sua senha"/>
+
           </div>
           <!--
           <div class="d-flex justify-content-around align-items-center mb-4">
@@ -29,11 +31,9 @@
           -->
 
           <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-lg btn-block btnLogin">Entrar</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block btnLogin  mt-5">Entrar</button>
 
         </form>
-        <p class="small fw-bold mt-2 pt-1 mb-0">Não possui conta? <a href="/register"
-            class="link-danger">Cadastra-se</a></p>
       </div>
     </div>
   </div>

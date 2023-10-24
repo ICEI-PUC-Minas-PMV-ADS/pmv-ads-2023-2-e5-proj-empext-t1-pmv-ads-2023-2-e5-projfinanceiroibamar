@@ -1,9 +1,21 @@
 
-.container2{
-  background-color: #DFFDD5;
+.containerLogin{
+  background-color: #C4EEF2;
+  color: #ffffff;
+}
+
+.label {
+  color: #025159;
+  font-weight: bold;
+}
+
+.inputDados {
+  background-color: #025159;
+  color: #ffffff;
 }
 
 .btnLogin {
-  background-color: #BBF88C;
-  color: #000000;
+  background-color: #025159;
+  color: #ffffff;
+  font-weight: bold;
 }

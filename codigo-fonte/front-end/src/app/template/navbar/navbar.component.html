@@ -1,22 +1,14 @@
-<header class="navSistema">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navSistema">
-    <!-- Container wrapper -->
-    <div class="container-fluid navSistema">
-      <a class="navbar-brand me-2" href="#">
-        <img
-          src="../../../assets/img/ibamar_logo.png"
-          height="64"
-          alt="Logo"
-          loading="lazy"
-          style="margin-top: -1px;"
-        />
-      </a>
-      <div class="d-flex align-items-center">
-        <button type="button"  (click)="logout()" class="btn btn-danger btn-lg btn-floating">
-          <i class="fa fa-times"></i>
-        </button>
-      </div>
+<div class="home-header">
+  <div style="display: flex;">
+    <div class="hamburger-menu">
+      <input type="checkbox" id="checkbox-hamburger-menu" [ngModel]="openSidebar" (ngModelChange)="modelChangeFn($event)"/>
+      <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
     </div>
-  </nav>
-</header>
+    <div class="title">Sistema Financeiro</div>
+  </div>
+</div>
+

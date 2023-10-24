@@ -82,3 +82,5 @@ C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanc
 C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\obj\Debug\net6.0\api-financeiro-ibamar.pdb
 C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\obj\Debug\net6.0\api-financeiro-ibamar.genruntimeconfig.cache
 C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\obj\Debug\net6.0\ref\api-financeiro-ibamar.dll
+C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\bin\Debug\net6.0\DotNetEnv.dll
+C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\bin\Debug\net6.0\Sprache.dll

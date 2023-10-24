@@ -4,7 +4,6 @@ import { Usuario } from './login/usuario';
 import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { UsuarioRegistro } from './register/usuarioRegistro';
 
 @Injectable({
   providedIn: 'root'
@@ -67,11 +66,7 @@ export class AuthService {
     return false;
   }
 
-  salvar(usuario: UsuarioRegistro): Observable<any>{
-    return this.http.post<any>(this.apiURL, usuario);
-  }
-
-  tentarLogar( username: string, password: string): Observable<any>{
+   tentarLogar( username: string, password: string): Observable<any>{
     /*const params = new HttpParams()
                                         .set('username', username)
                                         .set('password', password)

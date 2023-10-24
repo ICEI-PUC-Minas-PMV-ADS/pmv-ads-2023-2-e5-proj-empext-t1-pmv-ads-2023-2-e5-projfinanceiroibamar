@@ -74,6 +74,8 @@ builder.Services.AddSwaggerGen(c =>
                 });
 });
 
+DotNetEnv.Env.Load("./Environments/.env");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
+
+  openSidebar: boolean = true;
+
+  receberOpenSidebar(valor: boolean) {
+    this.openSidebar = valor;
+  }
+
+
 
 }
