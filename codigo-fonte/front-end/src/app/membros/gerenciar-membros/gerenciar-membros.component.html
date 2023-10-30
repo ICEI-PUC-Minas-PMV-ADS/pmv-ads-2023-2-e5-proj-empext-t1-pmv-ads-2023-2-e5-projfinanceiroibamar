@@ -1,0 +1,102 @@
+<section class="container">
+    <header class="header">
+        <h2>Membro {{ membro.id ? '# '+ membro.id : '' }} </h2>
+    </header>
+
+    <form>
+        <div class="col-md-12 col-lg-12 col-xl-12 offset-xl-1">
+            <div class="mb-3">
+                <label class="form-label" for="nome">Nome</label>
+                <input type="text" [(ngModel)]="membro.nome" class="form-control" name="nome"/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                        <label class="form-label" for="cpf">CPF</label>
+                        <input type="text" name="cpf" [(ngModel)]="membro.cpf"
+                            class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                        <label class="form-label" for="sexo">Sexo</label>
+                        <select name="sexo" [(ngModel)]="membro.sexo" class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                          </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="dataNascimento">Data de Nascimento</label>
+                    <input type="text" name="dataNascimento" [(ngModel)]="membro.dataNascimento"
+                    class="form-control"/>                    
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="email">E-mail</label>
+                <input type="text" [(ngModel)]="membro.email" class="form-control" name="email"/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                        <label class="form-label" for="telefone">Telefone</label>
+                        <input type="text" name="telefone" [(ngModel)]="membro.telefone"
+                            class="form-control" />
+                </div>
+                <div class="col-md-6 mb-3">
+                        <label class="form-label" for="celular">Celular</label>
+                        <input type="text" name="celular" [(ngModel)]="membro.celular"
+                        class="form-control"/>
+                </div>
+            </div>
+
+            <div class="mb-3"> 
+                <label class="form-label" for="cep">CEP</label>
+                <input type="text" name="cep" [(ngModel)]="membro.cep"
+                    class="form-control" (blur)="consultaCep()" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" [(ngModel)]="membro.logradouro"
+                    class="form-control" readonly />
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                        <label class="form-label" for="numero">Número</label>
+                        <input type="text" name="numero" [(ngModel)]="membro.numero"
+                            class="form-control" />
+                </div>
+                <div class="col-md-9 mb-3">
+                        <label class="form-label" for="complemento">Complemento</label>
+                        <input type="text" name="complemento" class="form-control"  [(ngModel)]="membro.complemento"/>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="bairro">Bairro</label>
+                    <input type="text" name="bairro" [(ngModel)]="membro.bairro"
+                        class="form-control" readonly />
+            </div>
+
+            <div class="row">
+                <div class="col-md-9 mb-3">
+                    <label class="form-label" for="cidade">Cidade</label>
+                        <input type="text" name="cidade" [(ngModel)]="membro.cidade"
+                            class="form-control" readonly />
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label class="form-label" for="uf">UF</label>
+                        <input type="text" name="uf" [(ngModel)]="membro.uf"
+                            class="form-control" readonly />
+                </div>
+            </div>
+
+
+
+            <button (click)="salvarMembro()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
+            <button (click)="cancelarMembro()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>
+
+        </div>
+    </form>
+</section>
