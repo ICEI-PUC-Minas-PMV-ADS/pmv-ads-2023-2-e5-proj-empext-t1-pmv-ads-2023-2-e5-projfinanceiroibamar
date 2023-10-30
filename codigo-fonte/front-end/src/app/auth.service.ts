@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from './login/usuario';
+import { UsuarioLogin } from './login/usuarioLogin';
 import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
@@ -8,6 +8,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   private readonly apiURL: string = environment.apiURLBase + "/Usuarios/cadastrar";
   private readonly tokenURL: string = environment.apiURLBase + "/Usuarios/login";
@@ -76,7 +77,7 @@ export class AuthService {
       'Content-Type' : 'application/x-www-form-urlencoded'
     }
     */
-    const usuario: Usuario= new Usuario();
+    const usuario: UsuarioLogin= new UsuarioLogin();
     usuario.login = username;
     usuario.senha = password;
     return this.http.post<any>(this.tokenURL, usuario);

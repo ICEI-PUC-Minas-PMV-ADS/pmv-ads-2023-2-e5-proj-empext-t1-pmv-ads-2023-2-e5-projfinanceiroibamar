@@ -13,6 +13,10 @@ import { TokenInterceptor } from './token.interceptor';
 import { NgxMaskModule } from "ngx-mask";
 import { PrincipalComponent } from './principal/principal.component';
 import { ContasModule } from './contas/contas.module';
+import { CategoriasModule } from './categorias/categorias.module';
+import { UsuariosModule } from './usuarios/usuarios.module';
+import { MembrosModule } from './membros/membros.module';
+import { FornecedoresModule } from './fornecedores/fornecedores.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { ContasModule } from './contas/contas.module';
     AppRoutingModule,
     TemplateModule,
     ContasModule,
+    CategoriasModule,
+    UsuariosModule,
+    MembrosModule,
+    FornecedoresModule
   ],
   providers: [
     AuthService,

@@ -1,0 +1,73 @@
+<section class="container">
+    <header class="header py-2">
+      <div class="d-flex justify-content-between">
+        <h2>Categorias</h2>
+        <button type="button" class="btn btn-primary" routerLink="/categorias/novo">Nova Categoria</button>
+      </div>
+    </header>
+  
+    <div class="pb-5">
+    <table datatable [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger" class="table align-middle mb-0 bg-white" >
+      <thead class="bg-light">
+        <tr>
+          <th>Id</th>
+          <th>Descrição</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of listaCategorias">
+          <td>
+            <div class="d-flex align-items-center">
+              <div class="ms-1">
+                <p class="fw-bold mb-1">{{ categoria.id }}</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">{{ categoria.descricao }}</p>
+          </td>
+          <td>
+              <button type="button" class="btn btn-warning btn-floating ms-1"
+                routerLink="/categorias/editar/{{ categoria.id }}">
+                <i class="fas fa-pen"></i>
+              </button>
+              <button type="button" class="btn btn-danger btn-floating ms-1"
+                (click)="prepararCategoriaParaAcao(categoria, 'deletar')" data-bs-toggle="modal" data-bs-target="#acaoModal">
+                <i class="fas fa-trash"></i>
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
+  
+  <div class="modal fade" id="acaoModal" tabindex="-1" aria-labelledby="acaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="acaoModalLabel">{{ tituloModal }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" *ngIf="categoriaSelecionado">
+          <div class="col mb-3">
+            <label for="recipient-name" class="col-form-label"><b>categoria No.:</b> {{ categoriaSelecionado.id }}</label>
+            <br>
+            <label for="message-text" class="col-form-label"><b>Descricao Categoria:</b> {{
+              categoriaSelecionado.descricao }}</label>
+            <br>
+          <div class="mb-3">
+  
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="acaoModal()">{{ tituloBotaoModal
+            }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

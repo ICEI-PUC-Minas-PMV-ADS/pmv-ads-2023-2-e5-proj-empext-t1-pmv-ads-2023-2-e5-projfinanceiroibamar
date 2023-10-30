@@ -16,6 +16,14 @@ namespace api_financeiro_ibamar.Context
 
         public DbSet<Categoria> Categorias { get; set; }
 
+        public DbSet<Membro> Membros { get; set; }
+
+        public DbSet<Fornecedor> Fornecedores { get; set; }
+
+        public DbSet<Receita> Receitas { get; set; }
+
+        public DbSet<Despesa> Despesas { get; set; }
+
 
     }
 }

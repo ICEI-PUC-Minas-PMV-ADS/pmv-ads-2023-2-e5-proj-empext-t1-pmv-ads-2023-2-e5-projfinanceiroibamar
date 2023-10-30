@@ -2,7 +2,6 @@
 using api_financeiro_ibamar.Context;
 using api_financeiro_ibamar.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
@@ -54,7 +53,6 @@ namespace api_financeiro_ibamar.Controllers
         }
 
 
-        [Route("cadastrar")]
         [HttpPost]
         public async Task<ActionResult<UsuarioDTO>> Cadastrar(UsuarioCadastroDTO usuarioDTO
             )
@@ -69,7 +67,7 @@ namespace api_financeiro_ibamar.Controllers
                 return Problem("Entity set 'ApplicationDbContext.Usuarios'  is null.");
             }
 
-            if ((usuarioDTO.Role != "admin") && (usuarioDTO.Role != "pastor") && (usuarioDTO.Role != "tesoureiro"))
+            if ((usuarioDTO.Role != "Admin") && (usuarioDTO.Role != "Pastor") && (usuarioDTO.Role != "Tesoureiro"))
             {
                 return Problem("Tipo de usario descocnhecido.");
             }
@@ -82,7 +80,7 @@ namespace api_financeiro_ibamar.Controllers
                 return new UsuarioDTO(usuarioCadastro.Id, usuarioCadastro.Nome, usuarioCadastro.Login, usuarioCadastro.Role, null);
             }
 
-            usuarioCadastro = new Usuario(usuarioDTO.Nome, usuarioDTO.Login, BCrypt.Net.BCrypt.HashPassword(usuarioDTO.Senha), usuarioDTO.Role);
+            usuarioCadastro = new Usuario(usuarioDTO.Nome, usuarioDTO.Login, BCrypt.Net.BCrypt.HashPassword(usuarioDTO.Senha), usuarioDTO.Role, "S");
             _context.Usuarios.Add(usuarioCadastro);
 
 
@@ -208,6 +206,35 @@ namespace api_financeiro_ibamar.Controllers
         private bool UsuarioExists(int id)
         {
             return (_context.Usuarios?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        // GET: api/Usuarios
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
+        {
+            if (_context.Usuarios == null)
+            {
+                return NotFound();
+            }
+            return await _context.Usuarios.ToListAsync();
+        }
+
+        // GET: api/Usuarios/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        {
+            if (_context.Usuarios == null)
+            {
+                return NotFound();
+            }
+            var usuario = await _context.Usuarios.FindAsync(id);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return usuario;
         }
 
     }

@@ -28,12 +28,13 @@ namespace api_financeiro_ibamar.Models
 
         
 
-        public Usuario(string Nome, string Login,String Senha, String Role)
+        public Usuario(string Nome, string Login,String Senha, String Role, string Ativo)
         {
             this.Senha = Senha;
             this.Nome = Nome;
             this.Login = Login;
             this.Role = Role;
+            this.Ativo = Ativo;
         }
 
         public Usuario()

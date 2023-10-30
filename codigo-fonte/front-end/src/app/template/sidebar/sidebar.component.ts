@@ -109,10 +109,10 @@ export class SidebarComponent {
       sub_menu: [
         {
           link_name: "Membros",
-          link: "/html-n-css",
+          link: "/membros",
         }, {
-          link_name: "Fornecedor",
-          link: "/javascript",
+          link_name: "Fornecedores",
+          link: "/fornecedores",
         }
       ]
     }, {
@@ -122,17 +122,17 @@ export class SidebarComponent {
       sub_menu: [
         {
           link_name: "Conta",
-          link: "/posts/web-design",
+          link: "/contas",
         }, {
           link_name: "Categorias",
-          link: "/posts/login-form",
+          link: "/categorias",
         }, {
           link_name: "Receitas",
-          link: "/posts/card-design",
+          link: "/receitas",
         }
         , {
           link_name: "Despesas",
-          link: "/posts/card-design",
+          link: "/despesas",
         }
       ]
     }, {
@@ -142,23 +142,23 @@ export class SidebarComponent {
       sub_menu: [
         {
           link_name: "Receitas",
-          link: "/ui-face",
+          link: "/relatorios/receitas",
         }, {
           link_name: "Despesas",
-          link: "/pigments",
+          link: "/relatorios/despesas",
         }, {
           link_name: "Mensal",
-          link: "/box-icons",
+          link: "/relatorios/mensal",
         }
       ]
     }, {
       link_name: "Setting",
-      link: "/setting",
+      link: "null",
       icon: "bx bx-cog",
       sub_menu: [
         {
           link_name: "Usuarios",
-          link: "/ui-face",
+          link: "/usuarios",
         }
       ]
     }, {

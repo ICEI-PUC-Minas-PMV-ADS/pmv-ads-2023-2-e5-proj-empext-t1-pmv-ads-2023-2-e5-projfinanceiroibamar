@@ -35,6 +35,7 @@ namespace api_financeiro_ibamar.Models.Dto
             usuario.Nome = Nome;
             usuario.Id = Id;
 
+
             return usuario;
         }
     }
