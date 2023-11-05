@@ -103,7 +103,32 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 <br>
 
+|Caso de teste   | CT-10 - Teste de Criação de novo membro: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir criação de membros.  
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Membro". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
+|Critérios de Êxito | <ul> <li>A novo membro deve ser criada com sucesso e aparecer na lista de membros. </li> 
 
+<br>
+
+|Caso de teste   | CT-11 Teste de filtro e pesquisa de menbros: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir editar membros. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma membro existente na lista. </li> <li> Clicar no botão "Editar". </li> <li>Realizar alterações nos campos desejados. </li><li> Clicar no botão "Salvar".</li> </ol>
+|Critérios de Êxito | <ul> <li>As alterações no membro devem ser salvas com sucesso. </li> 
+
+<br>
+
+|Caso de teste   | CT-11 -Teste de exclusão de membros:
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir excluir membros. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um membro existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
+|Critérios de Êxito | <ul> <li>Omembro selecionada deve ser excluída com sucesso.</li> 
+
+<br>
 
 
 # Evidências de Testes de Software
@@ -124,3 +149,12 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 ### CT-05 - Teste de edição de conta existente
 ![Figura 1](img/ct-05.png)
+
+### CT-06 - Teste de criação de novo membro 
+![Figura 1](img/ct-06.png)
+
+### CT-07 - Teste de edição de membro existente
+![Figura 1](img/ct-07.png)
+
+### CT-08 - Teste de edição de membro existente
+![Figura 1](img/ct-08.png)
