@@ -122,12 +122,12 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 <br>
 
-|Caso de teste   | CT-11 -Teste de exclusão de membros:
+|Caso de teste   | CT-12 -Teste de exclusão de membros:
 |------|-----------------------------------------|
 |Requisitos associados | RF-03​​  Gestão de membros. 
 |Objetivo do teste | Sistema permitir excluir membros. 
 |Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um membro existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
-|Critérios de Êxito | <ul> <li>Omembro selecionada deve ser excluída com sucesso.</li> 
+|Critérios de Êxito | <ul> <li>O membro selecionada deve ser excluída com sucesso.</li> 
 
 <br>
 
