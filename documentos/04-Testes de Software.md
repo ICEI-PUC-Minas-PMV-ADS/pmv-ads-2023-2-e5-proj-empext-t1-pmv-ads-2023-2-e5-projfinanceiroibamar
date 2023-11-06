@@ -190,3 +190,15 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 ### CT-08 - Teste de exclusão de membro existente
 ![Figura 1](img/ct-08.png)
+
+### CT-09 - Teste de criação de novo fornecedor 
+![Figura 1](img/teste-criacao-novo-fornecedor)
+
+### CT-09 - Teste de criação de novo fornecedor (Swagger) 
+![Figura 1](img/teste-criacao-novo-fornecedor-swagger)
+
+### CT-10 - Teste de edição de fornecedor existente
+![Figura 1](img/teste-edicao-fornecedor-exixtente)
+
+### CT-11 - Teste de exclusão de fornecedor existente
+![Figura 1](img/teste-exclusao-fornecedor-exixtente)
