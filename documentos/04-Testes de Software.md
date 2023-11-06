@@ -108,7 +108,8 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 |Requisitos associados | RF-03​​  Gestão de membros. 
 |Objetivo do teste | Sistema permitir criação de membros.  
 |Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Membro". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
-|Critérios de Êxito | <ul> <li>A novo membro deve ser criada com sucesso e aparecer na lista de membros. </li> 
+|Critérios de Êxito | <ul> <li>A novo membro deve ser criada com sucesso e aparecer na lista de membros. </li> </ol>
+|Passos no Swagger | <ul> <li>As alterações no membro devem ser salvas com sucesso apresentado o codigo 201. </li> 
 
 <br>
 
@@ -152,6 +153,9 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 ### CT-06 - Teste de criação de novo membro 
 ![Figura 1](img/ct-06.png)
+
+### CT-06 - Teste de criação de novo membro (Swagger) 
+![Figura 1](img/ct-06B.png)
 
 ### CT-07 - Teste de edição de membro existente
 ![Figura 1](img/ct-07.png)
