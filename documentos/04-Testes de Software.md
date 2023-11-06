@@ -129,6 +129,33 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 |Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um membro existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
 |Critérios de Êxito | <ul> <li>O membro selecionada deve ser excluída com sucesso.</li> 
 
+<br> 
+|Caso de teste   | CT-13 - Teste de Criação de novo fornecedor: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir criação de fornecedores.  
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Fornecedor". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
+|Critérios de Êxito | <ul> <li>A novo fornecedor deve ser criada com sucesso e aparecer na lista de fornecedores. </li> </ol>
+|Passos no Swagger | <ul> <li>Após preenchimento do Jason novo fornecedor deve ser criada com sucesso apresentado o código 201. </li> 
+
+<br>
+
+|Caso de teste   | CT-14 Teste de filtro e pesquisa de fornecedores: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir editar fornecedores. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma fornecedor existente na lista. </li> <li> Clicar no botão "Editar". </li> <li>Realizar alterações nos campos desejados. </li><li> Clicar no botão "Salvar".</li> </ol>
+|Critérios de Êxito | <ul> <li>As alterações no fornecedor devem ser salvas com sucesso. </li> 
+
+<br>
+
+|Caso de teste   | CT-15 -Teste de exclusão de fornecedores:
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir excluir fornecedores. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um fornecedor existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
+|Critérios de Êxito | <ul> <li>O fornecedor selecionada deve ser excluída com sucesso.</li> 
+
 <br>
 
 
