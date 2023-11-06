@@ -109,7 +109,7 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 |Objetivo do teste | Sistema permitir criação de membros.  
 |Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Membro". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
 |Critérios de Êxito | <ul> <li>A novo membro deve ser criada com sucesso e aparecer na lista de membros. </li> </ol>
-|Passos no Swagger | <ul> <li>As alterações no membro devem ser salvas com sucesso apresentado o codigo 201. </li> 
+|Passos no Swagger | <ul> <li>Após preenchimento do Jason novo membro deve ser criada com sucesso apresentado o codigo 201. </li> 
 
 <br>
 
