@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desenvolvimento\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj": {}
+    "D:\\Desenvolvimento\\PUC-Minas\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar-main\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj": {}
   },
   "projects": {
-    "C:\\Desenvolvimento\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj": {
+    "D:\\Desenvolvimento\\PUC-Minas\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar-main\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desenvolvimento\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj",
+        "projectUniqueName": "D:\\Desenvolvimento\\PUC-Minas\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar-main\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj",
         "projectName": "api-financeiro-ibamar",
-        "projectPath": "C:\\Desenvolvimento\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj",
-        "packagesPath": "C:\\Users\\Mario.Fernandes\\.nuget\\packages\\",
-        "outputPath": "C:\\Desenvolvimento\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\obj\\",
+        "projectPath": "D:\\Desenvolvimento\\PUC-Minas\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar-main\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\api-financeiro-ibamar.csproj",
+        "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\PUC-Minas\\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar-main\\codigo-fonte\\api-financeiro-ibamar\\api-financeiro-ibamar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mario.Fernandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -97,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

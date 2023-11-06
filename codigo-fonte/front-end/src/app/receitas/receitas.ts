@@ -7,11 +7,14 @@ export class Receita {
   id?: number;
   descricao?: string;
   valor?: number;
-  //dataLancamento?: Date;
+  dataLancamento?: Date;
   dataRecebimento?: Date;
   //usuario?: Usuario;
   usuarioId?: number;
-  membro?: Membro;
-  categoria?: Categoria;
-  conta?: Conta;
+  membroId?: number;
+  categoriaId?: number;
+  contaId?: number;
+  //membro?: Membro;
+  //categoria?: Categoria;
+  //conta?: Conta;
 }

@@ -37,7 +37,7 @@
 
     <div class="col-md-12 mb-3">
       <label class="form-label" for="membro">Membro</label>
-      <select name="membro" [(ngModel)]="idMembroSelecionado"  (ngModelChange)="preencherDadosMembro()" class="form-select" aria-label="Default select example">
+      <select name="membro" [(ngModel)]="receita.membroId" class="form-select" aria-label="Default select example">
           <option selected></option>
           <option *ngFor="let membro of listaMembros" value="{{ membro.id }}">
             {{ membro.nome }}
@@ -47,7 +47,7 @@
 
     <div class="col-md-12 mb-3">
       <label class="form-label" for="categoria">Categoria</label>
-      <select name="categoria" [(ngModel)]="idCategoriaSelecionado"  (ngModelChange)="preencherDadosCategoria()" class="form-select" aria-label="Default select example">
+      <select name="categoria" [(ngModel)]="receita.categoriaId" class="form-select" aria-label="Default select example">
           <option selected></option>
           <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
             {{ categoria.descricao }}
@@ -57,7 +57,7 @@
 
     <div class="col-md-12 mb-3">
       <label class="form-label" for="conta">Conta</label>
-      <select name="conta" [(ngModel)]="idContaSelecionado"  (ngModelChange)="preencherDadosConta()" class="form-select" aria-label="Default select example">
+      <select name="conta" [(ngModel)]="receita.contaId" class="form-select" aria-label="Default select example">
           <option selected></option>
           <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
             {{ conta.descricao }}

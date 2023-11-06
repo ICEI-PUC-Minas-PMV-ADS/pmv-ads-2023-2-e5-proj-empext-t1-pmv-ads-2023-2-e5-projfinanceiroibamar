@@ -28,9 +28,9 @@ export class GerenciarReceitasComponent {
     //dataLancamento?: Date;
     dataRecebimento: new Date(),
     usuarioId: 0,
-    membro: new Membro(),
-    categoria: new Categoria(),
-    conta: new Conta(),
+    membroId: 0,
+    categoriaId: 0,
+    contaId: 0,
   };
   listaMembros: Membro[] = [];
   errors?: String[];
@@ -40,12 +40,6 @@ export class GerenciarReceitasComponent {
   authService: any;
   listaContas: any;
   dtTrigger: Subject<any> = new Subject<any>();
-  idMembroSelecionado: number=0;
-  membroSelecionado: Membro=new Membro();
-  idContaSelecionado: number=0;
-  contaSelecionado: Membro=new Membro();
-  idCategoriaSelecionado: number=0;
-  categoriaSelecionado: Membro=new Membro();
 
 
   constructor(
@@ -87,15 +81,6 @@ export class GerenciarReceitasComponent {
   }
 
   salvarReceita() {
-    if (this.membroSelecionado) {
-      this.receita.membro = this.membroSelecionado;
-    }
-    if (this.contaSelecionado) {
-      this.receita.conta = this.contaSelecionado;
-    }
-    if (this.categoriaSelecionado) {
-      this.receita.categoria = this.categoriaSelecionado;
-    }
     console.log(this.receita)
     if (this.receita.id) {
       this.receitaService.editar(this.receita).subscribe(() => {
@@ -112,22 +97,4 @@ export class GerenciarReceitasComponent {
     this.router.navigate(['/receitas']);
   }
 
-
-  preencherDadosMembro(){
-    this.membroService.buscarPorId(this.idMembroSelecionado).subscribe((membro) => {
-      this.membroSelecionado =  membro;
-    });
-  }
-
-  preencherDadosConta() {
-    this.contaService.buscarPorId(this.idContaSelecionado).subscribe((conta) => {
-      this.contaSelecionado = conta;
-    });
-  }
-
-  preencherDadosCategoria() {
-    this.categoriaService.buscarPorId(this.idCategoriaSelecionado).subscribe((categoria) => {
-      this.categoriaSelecionado = categoria;
-    });
-  }
 }

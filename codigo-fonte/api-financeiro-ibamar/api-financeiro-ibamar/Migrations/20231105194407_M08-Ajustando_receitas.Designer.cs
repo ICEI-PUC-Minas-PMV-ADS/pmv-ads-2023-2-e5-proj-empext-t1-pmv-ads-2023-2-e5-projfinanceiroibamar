@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using api_financeiro_ibamar.Context;
 
@@ -11,9 +12,11 @@ using api_financeiro_ibamar.Context;
 namespace api_financeiro_ibamar.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231105194407_M08-Ajustando_receitas")]
+    partial class M08Ajustando_receitas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +76,6 @@ namespace api_financeiro_ibamar.Migrations
                     b.Property<int>("ContaId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DataLancamento")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("DataPagamento")
                         .HasColumnType("datetime2");
 
@@ -92,8 +92,9 @@ namespace api_financeiro_ibamar.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Valor")
-                        .HasColumnType("float");
+                    b.Property<string>("Valor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

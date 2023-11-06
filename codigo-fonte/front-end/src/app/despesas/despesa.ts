@@ -1,6 +1,6 @@
 import { Categoria } from "../categorias/categoria";
 import { Conta } from "../contas/conta";
-import { Membro } from "../membros/membro";
+import { Fornecedor } from "../fornecedores/fornecedor";
 import { Usuario } from "../usuarios/usuario";
 
 export class Despesa {
@@ -9,9 +9,12 @@ export class Despesa {
   valor?: string;
   dataVencimento?: Date;
   dataPagamento?: Date;
-  usuario?: Usuario;
+  //usuario?: Usuario;
   usuarioId?: number;
-  membro?: Membro;
-  categoria?: Categoria;
-  conta?: Conta;
+  //fornecedor?: Fornecedor;
+  fornecedorId?: number;
+  //categoria?: Categoria;
+  categoriaId?: number;
+  //conta?: Conta;
+  contaId?: number;
 }
