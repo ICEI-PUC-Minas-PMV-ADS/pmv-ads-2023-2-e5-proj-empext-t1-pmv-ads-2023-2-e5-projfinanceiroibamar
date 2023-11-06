@@ -130,6 +130,7 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 |Critérios de Êxito | <ul> <li>O membro selecionada deve ser excluída com sucesso.</li> 
 
 <br> 
+
 |Caso de teste   | CT-13 - Teste de Criação de novo fornecedor: 
 |------|-----------------------------------------|
 |Requisitos associados | RF-03​​  Gestão de fornecedores. 
