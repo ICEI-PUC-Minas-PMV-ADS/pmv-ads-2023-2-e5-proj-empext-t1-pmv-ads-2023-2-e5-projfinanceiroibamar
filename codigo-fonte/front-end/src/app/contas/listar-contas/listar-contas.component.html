@@ -2,71 +2,112 @@
   <header class="header py-2">
     <div class="d-flex justify-content-between">
       <h2>Contas</h2>
-      <button type="button" class="btn btn-primary" routerLink="/contas/novo">Nova Conta</button>
+      <button type="button" class="btn btn-primary" routerLink="/contas/novo">
+        Nova Conta
+      </button>
     </div>
   </header>
 
   <div class="pb-5">
-  <table datatable [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger" class="table align-middle mb-0 bg-white" >
-    <thead class="bg-light">
-      <tr>
-        <th>Conta</th>
-        <th>Descricao</th>
-        <th>Saldo</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let conta of listaContas">
-        <td>
-          <div class="d-flex align-items-center">
-            <div class="ms-1">
-              <p class="fw-bold mb-1">{{ conta.id }}</p>
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger"
+      class="table align-middle mb-0 bg-white"
+    >
+      <thead class="bg-light">
+        <tr>
+          <th>Conta</th>
+          <th>Descrição</th>
+          <th>Saldo</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conta of listaContas">
+          <td>
+            <div class="d-flex align-items-center">
+              <div class="ms-1">
+                <p class="fw-bold mb-1">{{ conta.id }}</p>
+              </div>
             </div>
-          </div>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">{{ conta.descricao }}</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">R$ {{ conta.saldo }}</p>
-        </td>
-        <td>
-            <button type="button" class="btn btn-warning btn-floating ms-1"
-              routerLink="/contas/editar/{{ conta.id }}">
+          </td>
+          <td>
+            <p class="fw-normal mb-1">{{ conta.descricao }}</p>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">R$ {{ conta.saldo }}</p>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-warning btn-floating ms-1"
+              routerLink="/contas/editar/{{ conta.id }}"
+            >
               <i class="fas fa-pen"></i>
             </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <button
+              type="button"
+              class="btn btn-danger btn-floating ms-1"
+              (click)="prepararContaParaAcao(conta, 'deletar')"
+              data-bs-toggle="modal"
+              data-bs-target="#acaoModal"
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+
+            <!-- Add any other buttons or actions as needed for Contas -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<div class="modal fade" id="acaoModal" tabindex="-1" aria-labelledby="acaoModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="acaoModal"
+  tabindex="-1"
+  aria-labelledby="acaoModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="acaoModalLabel">{{ tituloModal }}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body" *ngIf="contaSelecionado">
         <div class="col mb-3">
-          <label for="recipient-name" class="col-form-label"><b>conta No.:</b> {{ contaSelecionado.id }}</label>
-          <br>
-          <label for="message-text" class="col-form-label"><b>Descricao Conta:</b> {{
-            contaSelecionado.descricao }}</label>
-          <br>
-        <div class="mb-3">
-
+          <label for="recipient-name" class="col-form-label"
+            ><b>Conta No.:</b> {{ contaSelecionado.id }}</label
+          >
+          <br />
+          <label for="message-text" class="col-form-label"
+            ><b>Descrição Conta:</b> {{ contaSelecionado.descricao }}</label
+          >
+          <br />
+          <!-- Add any other fields related to Contas here -->
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="acaoModal()">{{ tituloBotaoModal
-          }}</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Voltar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="acaoModal()"
+        >
+          {{ tituloBotaoModal }}
+        </button>
       </div>
     </div>
   </div>
 </div>
-

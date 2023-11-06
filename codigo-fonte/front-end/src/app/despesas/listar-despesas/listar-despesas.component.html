@@ -1,0 +1,72 @@
+<section class="container">
+  <header class="header py-2">
+    <div class="d-flex justify-content-between">
+      <h2>Despesas</h2>
+      <button type="button" class="btn btn-primary" routerLink="/despesas/novo">Nova Despesa</button>
+    </div>
+  </header>
+
+  <div class="pb-5">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table align-middle mb-0 bg-white">
+      <thead class="bg-light">
+        <tr>
+          <th>Id</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+
+          <th>Data de Pagamento</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let despesa of listaDespesas">
+          <td>{{ despesa.id }}</td>
+          <td>{{ despesa.descricao }}</td>
+          <td>{{ despesa.valor }}</td>
+          <td>{{ despesa.dataPagamento | date }}</td>
+          <td>
+            <button type="button" class="btn btn-warning btn-floating ms-1"
+              routerLink="/despesas/editar/{{ despesa.id }}">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-floating ms-1"
+              (click)="prepararDespesaParaAcao(despesa, 'deletar')" data-bs-toggle="modal" data-bs-target="#acaoModal">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="modal fade" id="acaoModal" tabindex="-1" aria-labelledby="acaoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="acaoModalLabel">{{ tituloModal }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngIf="despesaSelecionada">
+        <div class="col mb-3">
+          <label for="recipient-name" class="col-form-label"><b>Despesa No.:</b> {{ despesaSelecionada.id }}</label>
+          <br>
+          <label for="message-text" class="col-form-label"><b>Descrição:</b> {{ despesaSelecionada.descricao }}</label>
+          <br>
+          <label for="message-text" class="col-form-label"><b>Valor:</b> {{ despesaSelecionada.valor }}</label>
+          <br>
+          <br>
+          <label for="message-text" class="col-form-label"><b>Data de Pagamento:</b> {{ despesaSelecionada.dataPagamento | date }}</label>
+          <br>
+          <br>
+          <label for="message-text" class="col-form-label"><b>Data de Vencimento:</b> {{ despesaSelecionada.dataVencimento | date }}</label>
+          <br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="acaoModal()">{{ tituloBotaoModal }}</button>
+      </div>
+    </div>
+  </div>
+</div>

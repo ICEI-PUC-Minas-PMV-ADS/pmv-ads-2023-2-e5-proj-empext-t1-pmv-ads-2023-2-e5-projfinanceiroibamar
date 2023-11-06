@@ -1,0 +1,71 @@
+<section class="container">
+  <header class="header">
+    <h2>Despesa {{ despesa.id ? '# '+ despesa.id : '' }} </h2>
+  </header>
+
+  <form>
+    <div class="mb-3">
+      <label class="form-label" for="descricao">Descrição</label>
+      <input type="text" [(ngModel)]="despesa.descricao" class="form-control" name="descricao" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="valor">Valor</label>
+      <input type="text" [(ngModel)]="despesa.valor" class="form-control" name="valor" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="dataPagamento">Data de Pagamento</label>
+      <input type="date" [(ngModel)]="despesa.dataPagamento" class="form-control" name="dataPagamento" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="dataPagamento">Data de Vencimento</label>
+      <input type="date" [(ngModel)]="despesa.dataVencimento" class="form-control" name="dataPagamento" required />
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <label class="form-label" for="usuario">Usuário</label>
+      <select name="usuario" [(ngModel)]="despesa.usuarioId" class="form-select" aria-label="Default select example">
+          <option selected></option>
+          <option *ngFor="let usuario of listaUsuarios" value="{{ usuario.id }}">
+            {{ usuario.nome }}
+          </option>
+        </select>
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <label class="form-label" for="membro">Membro</label>
+      <select name="membro" [(ngModel)]="idMembroSelecionado"  (ngModelChange)="preencherDadosMembro()" class="form-select" aria-label="Default select example">
+          <option selected></option>
+          <option *ngFor="let membro of listaMembros" value="{{ membro.id }}">
+            {{ membro.nome }}
+          </option>
+        </select>
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <label class="form-label" for="categoria">Categoria</label>
+      <select name="categoria" [(ngModel)]="idCategoriaSelecionado"  (ngModelChange)="preencherDadosCategoria()" class="form-select" aria-label="Default select example">
+          <option selected></option>
+          <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
+            {{ categoria.descricao }}
+          </option>
+        </select>
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <label class="form-label" for="conta">Conta</label>
+      <select name="conta" [(ngModel)]="idContaSelecionado"  (ngModelChange)="preencherDadosConta()" class="form-select" aria-label="Default select example">
+          <option selected></option>
+          <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
+            {{ conta.descricao }}
+          </option>
+        </select>
+    </div>
+
+    <button (click)="salvarDespesa()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
+    <button (click)="cancelarDespesa()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>
+  </form>
+</section>
+

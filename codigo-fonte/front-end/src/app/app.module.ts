@@ -17,6 +17,9 @@ import { CategoriasModule } from './categorias/categorias.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { MembrosModule } from './membros/membros.module';
 import { FornecedoresModule } from './fornecedores/fornecedores.module';
+import { ReceitasModule } from './receitas/receitas.module';
+import { DespesasModule } from './despesas/despesas.module';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { FornecedoresModule } from './fornecedores/fornecedores.module';
     CategoriasModule,
     UsuariosModule,
     MembrosModule,
-    FornecedoresModule
+    FornecedoresModule,
+    ReceitasModule,
+    DespesasModule
   ],
   providers: [
     AuthService,

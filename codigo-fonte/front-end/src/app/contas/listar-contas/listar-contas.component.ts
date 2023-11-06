@@ -1,11 +1,7 @@
 import { ContaService } from './../conta.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Conta } from '../conta';
-import { AuthService } from 'src/app/auth.service';
 import { Subject } from 'rxjs';
-
-
-
 
 @Component({
   selector: 'app-listar-contas',
@@ -25,9 +21,9 @@ export class ListarContasComponent implements OnInit {
   dtTrigger: Subject<any>=new Subject<any>();
 
 
+
   constructor(
     private contaService: ContaService,
-    private authService: AuthService,
     ) { }
 
   ngOnInit(): void {
@@ -38,7 +34,7 @@ export class ListarContasComponent implements OnInit {
   }
 
   carregarContas() {
-    this.contaService.listar(this.authService.getUsuarioId()).subscribe((listaContas)=> {
+    this.contaService.listar().subscribe((listaContas)=> {
       this.listaContas = listaContas;
       console.log('passou aqui');
       this.dtTrigger.next(null);
@@ -55,17 +51,11 @@ export class ListarContasComponent implements OnInit {
 
   acaoModal(){
     if (this.acao && this.contaSelecionado && this.contaSelecionado.id){
-      if(this.acao === 'enviar'){
-        if(this.contaSelecionado.saldo == 0) {
-          alert("Valor do Conta zerado!!!");
-          return
-        }
-        this.contaService.enviar(this.contaSelecionado.id).subscribe(()=>{
-          console.log("enviar");
+      if(this.acao === 'deletar'){
+        this.contaService.deletar(this.contaSelecionado.id).subscribe(()=>{
           this.ngOnInit();
         });
       }
     }
   }
-
 }

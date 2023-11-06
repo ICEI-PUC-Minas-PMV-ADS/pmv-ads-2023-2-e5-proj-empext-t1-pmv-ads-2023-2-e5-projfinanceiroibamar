@@ -8,7 +8,6 @@ import { Conta } from './conta';
   providedIn: 'root'
 })
 export class ContaService {
-
   private readonly apiURL: string = environment.apiURLBase + "/Contas";
 
 
@@ -16,10 +15,11 @@ export class ContaService {
     private http: HttpClient
   ) { }
 
-  listar(usuarioId: number): Observable<Conta[]>{
-    const url = `${this.apiURL}`
+  listar(): Observable<Conta[]> {
+    const url = `${this.apiURL}`;
     return this.http.get<Conta[]>(url);
   }
+
 
   editar(conta: Conta): Observable<Conta> {
     const url = `${this.apiURL}/${conta.id}`
@@ -40,5 +40,10 @@ export class ContaService {
   enviar(id: number): Observable<Conta> {
     const url = `${this.apiURL}/${id}/enviar`
     return this.http.post<Conta>(url, null);
+  }
+
+  deletar(id: number): Observable<Conta> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url);
   }
 }
