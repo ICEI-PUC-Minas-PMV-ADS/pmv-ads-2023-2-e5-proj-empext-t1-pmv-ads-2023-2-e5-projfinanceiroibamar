@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Receita } from '../receitas';
 import { Subject } from 'rxjs';
 import { ReceitaService } from '../receitas.service';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-receitas',
@@ -22,7 +23,8 @@ export class ListarReceitasComponent {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarReceitas();
   }

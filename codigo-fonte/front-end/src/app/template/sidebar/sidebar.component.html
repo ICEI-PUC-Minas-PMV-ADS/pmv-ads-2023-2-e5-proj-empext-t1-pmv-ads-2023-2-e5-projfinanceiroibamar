@@ -1,5 +1,4 @@
-<div class="sidebar" [class.sidebar-close]="!openSidebar">
-
+<div class="sidebar d-flex flex-column flex-shrink-0" [class.sidebar-close]="!openSidebar">
 
   <div class="logo-details">
     <div class="logo"></div>
@@ -27,5 +26,19 @@
       </ul>
     </li>
   </ul>
-
+  <hr>
+  <div class="dropdown">
+    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://scontent.fmao1-1.fna.fbcdn.net/v/t39.30808-1/327272319_920165379119676_5247873540109765939_n.jpg?stp=cp0_dst-jpg_e15_p120x120_q65&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-2n3vhq0_IgAX9lUOJ5&_nc_ht=scontent.fmao1-1.fna&oh=00_AfDQZWa37GOzWbbXAK4fn0rb4qfjj0Xjio6hNuJUw_hTJQ&oe=65527874" alt="" width="32" height="32" class="rounded-circle me-2">
+      <strong>{{ usuarioLogado }}</strong>
+    </a>
+    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+      <!--<li><a class="dropdown-item" href="#">New project...</a></li>
+      <li><a class="dropdown-item" href="#">Settings</a></li>
+      <li><a class="dropdown-item" href="#">Profile</a></li>
+      <li><hr class="dropdown-divider"></li> -->
+      <li><a class="dropdown-item" href="#" (click)="logout()">Sair</a></li>
+    </ul>
+  </div>
 </div>
+

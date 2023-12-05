@@ -19,8 +19,8 @@ namespace api_financeiro_ibamar.Models
         [Required(ErrorMessage = "Obrigatório Informar o sexo!")]
         public string Sexo { get; set; }
 
-        //[Required(ErrorMessage = "Obrigatório Informar a Data de Nascimento!")]
-        //public DateTime DataNascimento { get; set; }
+        [Required(ErrorMessage = "Obrigatório Informar a Data de Nascimento!")]
+        public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "Obrigatório Informar o telefone!")]
         public string Telefone { get; set; }

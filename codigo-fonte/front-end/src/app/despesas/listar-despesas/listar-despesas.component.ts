@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Despesa } from 'src/app/despesas/despesa';
 import { Subject } from 'rxjs';
 import { DespesaService } from '../despesas.service';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-despesas',
@@ -22,7 +23,8 @@ export class ListarDespesasComponent {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarDespesas();
   }

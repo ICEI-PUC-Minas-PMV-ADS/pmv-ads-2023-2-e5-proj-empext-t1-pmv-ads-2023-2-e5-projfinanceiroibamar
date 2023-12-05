@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Fornecedor } from '../fornecedor';
 import { Subject } from 'rxjs';
 import { FornecedorService } from '../fornecedor.service';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-fornecedores',
@@ -25,7 +26,8 @@ export class ListarFornecedoresComponent {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarFornecedors();
   }

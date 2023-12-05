@@ -3,6 +3,7 @@ import { Subject } from 'rxjs';
 import { AuthService } from 'src/app/auth.service';
 import { CategoriaService } from '../categoria.service';
 import { Categoria } from '../categoria';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-categorias',
@@ -26,7 +27,8 @@ export class ListarCategoriasComponent {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarCategorias();
   }

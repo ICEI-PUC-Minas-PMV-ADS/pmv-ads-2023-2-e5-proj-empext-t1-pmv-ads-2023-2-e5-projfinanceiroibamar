@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace api_financeiro_ibamar.Models
 {
@@ -15,7 +16,7 @@ namespace api_financeiro_ibamar.Models
         [Required(ErrorMessage = "Obrigatório Informar o Nome!")]
         public double Valor { get; set; }
 
-        public DateTime DataLancamento { get; set; }
+        //public DateTime DataLancamento { get; set; }
 
         [Required(ErrorMessage = "Obrigatório Informar a Data de Vencimento!")]
         public DateTime DataVencimento { get; set; }
@@ -27,7 +28,8 @@ namespace api_financeiro_ibamar.Models
         [Required(ErrorMessage = "Obrigatório Informar o Usuario!")]
         public int UsuarioId { get; set; }
 
-        //public Fornecedor Fornecedor { get; set; }
+        [JsonIgnore]
+        public virtual Fornecedor Fornecedor { get; set; }
 
         [Required(ErrorMessage = "Obrigatório Informar o Fornecedor!")]
         public int FornecedorId { get; set; }

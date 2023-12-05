@@ -54,6 +54,8 @@ namespace api_financeiro_ibamar.Controllers
 
 
         [HttpPost]
+
+        [AllowAnonymous]
         public async Task<ActionResult<UsuarioDTO>> Cadastrar(UsuarioCadastroDTO usuarioDTO
             )
         {
@@ -77,7 +79,7 @@ namespace api_financeiro_ibamar.Controllers
 
             if (!(usuarioCadastro == null))
             {
-                return new UsuarioDTO(usuarioCadastro.Id, usuarioCadastro.Nome, usuarioCadastro.Login, usuarioCadastro.Role, null);
+                return new UsuarioDTO(usuarioCadastro.Id, usuarioCadastro.Nome, usuarioCadastro.Login, "", usuarioCadastro.Role);
             }
 
             usuarioCadastro = new Usuario(usuarioDTO.Nome, usuarioDTO.Login, BCrypt.Net.BCrypt.HashPassword(usuarioDTO.Senha), usuarioDTO.Role, "S");
@@ -101,7 +103,7 @@ namespace api_financeiro_ibamar.Controllers
             }
 
 
-            return new UsuarioDTO(usuarioCadastro.Id, usuarioCadastro.Nome, usuarioCadastro.Login, usuarioCadastro.Role, null);
+            return new UsuarioDTO(usuarioCadastro.Id, usuarioCadastro.Nome, usuarioCadastro.Login, "", usuarioCadastro.Role);
 
 
         }

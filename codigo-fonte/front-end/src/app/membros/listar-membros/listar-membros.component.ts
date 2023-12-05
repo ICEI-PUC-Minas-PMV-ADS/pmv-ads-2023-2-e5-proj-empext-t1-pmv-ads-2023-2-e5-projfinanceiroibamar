@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Membro } from '../membro';
 import { Subject } from 'rxjs';
 import { MembroService } from '../membro.service';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-membros',
@@ -18,14 +19,14 @@ export class ListarMembrosComponent {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any>=new Subject<any>();
 
-
   constructor(
     private membroService: MembroService,
     ) { }
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarMembros();
   }

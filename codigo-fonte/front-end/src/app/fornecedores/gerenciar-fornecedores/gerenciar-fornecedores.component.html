@@ -6,8 +6,7 @@
     <form>
         <div class="col-md-12 col-lg-12 col-xl-12 offset-xl-1">
             <div class="row">
-                
-                <div class="col-md-6 mb-3">
+                <div class="col-md-2 mb-3">
                     <label class="form-label" for="tipoPessoa">Tipo de Pessoa</label>
                     <select name="tipoPessoa" [(ngModel)]="fornecedor.tipoPessoa" class="form-select" aria-label="Default select example">
                         <option selected></option>
@@ -15,68 +14,77 @@
                         <option>Jurídica</option>
                       </select>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-3 mb-3">
                         <label class="form-label" for="cpf">CPF</label>
                         <input type="text" name="cpf" [(ngModel)]="fornecedor.cpf_cnpj"
                             class="form-control" />
                 </div>
-            </div>
 
-            <div class="mb-3">
-                <label class="form-label" for="nomeSocial">Razão Social</label>
-                <input type="text" [(ngModel)]="fornecedor.razaoSocial" class="form-control" name="nomeSocial"/>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="nomeFantasia">Nome Fantasia</label>
-                <input type="text" [(ngModel)]="fornecedor.nomeFantasia" class="form-control" name="nomeFantasia"/>
+                <div class="col-md-7 mb-3">
+                    <label class="form-label" for="nomeSocial">Razão Social</label>
+                    <input type="text" [(ngModel)]="fornecedor.razaoSocial" class="form-control" name="nomeSocial"/>
+                </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-8 mb-3">
+                    <label class="form-label" for="nomeFantasia">Nome Fantasia</label>
+                    <input type="text" [(ngModel)]="fornecedor.nomeFantasia" class="form-control" name="nomeFantasia"/>
+                </div>
+                <div class="col-md-4 mb-3">
                         <label class="form-label" for="telefone">Telefone</label>
                         <input type="text" name="telefone" [(ngModel)]="fornecedor.telefone"
                             class="form-control" />
                 </div>
             </div>
 
-            <div class="mb-3"> 
-                <label class="form-label" for="cep">CEP</label>
-                <input type="text" name="cep" [(ngModel)]="fornecedor.cep"
-                    class="form-control" (blur)="consultaCep()" />
-            </div>
+            
 
-            <div class="mb-3">
-                <label class="form-label" for="logradouro">Logradouro</label>
-                <input type="text" name="logradouro" [(ngModel)]="fornecedor.logradouro"
-                    class="form-control" readonly />
-            </div>
+            
+
+            
 
             <div class="row">
-                <div class="col-md-3 mb-3">
+                <div class="col-md-2 mb-3"> 
+                    <label class="form-label" for="cep">CEP</label>
+                    <input type="text" name="cep" [(ngModel)]="fornecedor.cep"
+                        class="form-control" (blur)="consultaCep()" />
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="logradouro">Logradouro</label>
+                    <input type="text" name="logradouro" [(ngModel)]="fornecedor.logradouro"
+                        class="form-control" readonly />
+                </div>
+    
+                <div class="col-md-2 mb-3">
                         <label class="form-label" for="numero">Número</label>
                         <input type="text" name="numero" [(ngModel)]="fornecedor.numero"
                             class="form-control" />
                 </div>
-                <div class="col-md-9 mb-3">
+                <div class="col-md-4 mb-3">
                         <label class="form-label" for="complemento">Complemento</label>
                         <input type="text" name="complemento" class="form-control"  [(ngModel)]="fornecedor.complemento"/>
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label class="form-label" for="bairro">Bairro</label>
-                    <input type="text" name="bairro" [(ngModel)]="fornecedor.bairro"
-                        class="form-control" readonly />
-            </div>
+            
+
+            
 
             <div class="row">
-                <div class="col-md-9 mb-3">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="bairro">Bairro</label>
+                        <input type="text" name="bairro" [(ngModel)]="fornecedor.bairro"
+                            class="form-control" readonly />
+                </div>
+
+                <div class="col-md-7 mb-3">
                     <label class="form-label" for="cidade">Cidade</label>
                         <input type="text" name="cidade" [(ngModel)]="fornecedor.cidade"
                             class="form-control" readonly />
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-1 mb-3">
                     <label class="form-label" for="uf">UF</label>
                         <input type="text" name="uf" [(ngModel)]="fornecedor.uf"
                             class="form-control" readonly />

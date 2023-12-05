@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Usuario } from '../usuario';
 import { Subject } from 'rxjs';
 import { UsuarioService } from '../usuario.service';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-usuarios',
@@ -25,7 +26,8 @@ export class ListarUsuariosComponent {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarUsuarios();
   }

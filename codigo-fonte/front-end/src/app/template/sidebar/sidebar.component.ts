@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -98,11 +99,6 @@ export class SidebarComponent {
 
   menuSidebar = [
     {
-      link_name: "Dashboard",
-      link: "/dashboard",
-      icon: "bx bx-grid-alt",
-      sub_menu: []
-    }, {
       link_name: "Cadastro",
       link: null,
       icon: "bx bx-collection",
@@ -136,23 +132,7 @@ export class SidebarComponent {
         }
       ]
     }, {
-      link_name: "Relatórios",
-      link: null,
-      icon: "bx bx-plug",
-      sub_menu: [
-        {
-          link_name: "Receitas",
-          link: "/relatorios/receitas",
-        }, {
-          link_name: "Despesas",
-          link: "/relatorios/despesas",
-        }, {
-          link_name: "Mensal",
-          link: "/relatorios/mensal",
-        }
-      ]
-    }, {
-      link_name: "Setting",
+      link_name: "Configurações",
       link: "null",
       icon: "bx bx-cog",
       sub_menu: [
@@ -161,20 +141,24 @@ export class SidebarComponent {
           link: "/usuarios",
         }
       ]
-    }, {
-      link_name: "Log out",
-      link: "/exit",
-      icon: "bx bx-log-out",
-      sub_menu: []
     }
-  ]
+  ];
 
-  constructor() { }
 
-  ngOnInit() { }
+  usuarioLogado: string = "";
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit() { 
+    this.usuarioLogado = this.authService.getUsuarioAutenticado();
+  }
 
   showSubmenu(itemEl: HTMLElement) {
     itemEl.classList.toggle("showMenu");
+  }
+
+  logout(){
+    this.authService.encerrarSessao();
   }
 
 

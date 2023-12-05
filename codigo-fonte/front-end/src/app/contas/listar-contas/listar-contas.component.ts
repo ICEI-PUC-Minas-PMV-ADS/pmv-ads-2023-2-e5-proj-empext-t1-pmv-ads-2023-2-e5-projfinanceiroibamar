@@ -2,6 +2,7 @@ import { ContaService } from './../conta.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Conta } from '../conta';
 import { Subject } from 'rxjs';
+import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
 
 @Component({
   selector: 'app-listar-contas',
@@ -28,7 +29,8 @@ export class ListarContasComponent implements OnInit {
 
   ngOnInit(): void {
     this.dtOptions = {
-      pagingType: 'full_numbers'
+      pagingType: 'full_numbers',
+      language: LanguageApp.pt_br_datatables
     };
     this.carregarContas();
   }
@@ -36,7 +38,6 @@ export class ListarContasComponent implements OnInit {
   carregarContas() {
     this.contaService.listar().subscribe((listaContas)=> {
       this.listaContas = listaContas;
-      console.log('passou aqui');
       this.dtTrigger.next(null);
     });
   }
