@@ -11,25 +11,25 @@ Visão geral da interação do usuário com as funcionalidades que fazem parte d
 
 https://www.figma.com/file/DjwRKORYkt48l6M7zlk4Jc/Sistema-Financeiro-Igreja-Batista-Amar?type=design&node-id=1363%3A334&mode=design&t=EqsSo4HXrXCn5NZP-1
 
-![Tela Inicial](img/telainicial.png)
+![Tela Inicial](img/telainicial.PNG)
 
-![Tela Menu](img/telamenu.png)
+![Tela Menu](img/telamenu.PNG)
 
-![Nova Conta](img/cadastrocontas.png)
+![Nova Conta](img/novaconta.PNG)
 
-![Cadastro Membros](img/cadastromembro.png)
+![Cadastro Membros](img/cadastromembro.PNG)
 
-![Cadastro Fornecedores](img/cadastrofornecedor.png)
+![Cadastro Fornecedores](img/cadastrofornecedor.PNG)
 
-![Cadastro Contas](img/cadastrocontas.png)
+![Cadastro Contas](img/cadastrocontas.PNG)
 
-![Cadastro Categorias](img/cadastrocategoria.png)
+![Cadastro Categorias](img/cadastrocategoria.PNG)
 
-![Cadastro Receitas](img/cadastroreceita.png)
+![Cadastro Receitas](img/cadastroreceita.PNG)
 
-![Cadastro Despesas](img/cadastrodespesa.png)
+![Cadastro Despesas](img/cadastrodespesa.PNG)
 
-![Relatorio Receitas](img/relatorioreceita.png)
+![Relatorio Receitas](img/relatorioreceita.PNG)
 
-![Relatorio Despesa](img/relatoriodespesa.png)
+![Relatorio Despesa](img/relatoriodespesa.PNG)
 
