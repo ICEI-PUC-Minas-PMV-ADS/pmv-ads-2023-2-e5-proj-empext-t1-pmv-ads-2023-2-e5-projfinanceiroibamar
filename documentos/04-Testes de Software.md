@@ -159,6 +159,110 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 <br>
 
+|Caso de teste   | CT-16 - Teste de Login com Credenciais Válidas:
+|------|-----------------------------------------|
+|Requisitos associados | RF-01​​  Usuário fazer login
+|Objetivo do teste | O sistema deve permitir o acesso do usuário. 
+|Passos | <ol><li> Acessar a página de login. </li> <li> Inserir um nome de usuário e senha válidos. </li> <li> Clicar no botão de login. </li></ol>
+|Critérios de Êxito | <ul> <li> Acessa pagina home. </li> 
+
+<br>
+
+|Caso de teste   | CT-17 - Teste de Login com Credenciais Inválidas:
+|------|-----------------------------------------|
+|Requisitos associados | RF-01​​  Usuário fazer login
+|Objetivo do teste | O sistema não permitir o acesso com credenciais inválidas. 
+|Passos | <ol><li> Acessar a página de login. </li> <li> Inserir um nome de usuário e senha inválidos. </li> <li> Clicar no botão de login. </li></ol>
+|Critérios de Êxito | <ul> <li>O sistema deve exibir uma mensagem de erro informando que as credenciais são inválidas. </li> 
+
+<br>
+
+Plano de Testes: Funcionalidade de Gestão de Contas
+
+|Caso de teste   | CT-18 - Teste de Criação de nova conta: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de contas. 
+|Objetivo do teste | Sistema permitir criação de contas.  
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Nova Conta". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
+|Critérios de Êxito | <ul> <li>A nova conta deve ser criada com sucesso e aparecer na lista de contas. </li> 
+
+<br>
+
+|Caso de teste   | CT-19 - Teste de edição de conta existente:  
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de contas. 
+|Objetivo do teste | Sistema permitir editar contas. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma conta existente na lista. </li> <li> Clicar no botão "Editar". </li> <li>Realizar alterações nos campos desejados. </li><li> Clicar no botão "Salvar".</li> </ol>
+|Critérios de Êxito | <ul> <li>As alterações na conta devem ser salvas com sucesso. </li> 
+
+<br>
+
+
+|Caso de teste   | CT-20 -Teste de exclusão de conta:
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de contas. 
+|Objetivo do teste | Sistema permitir excluir contas. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma conta existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
+|Critérios de Êxito | <ul> <li>A conta selecionada deve ser excluída com sucesso.</li> 
+
+<br>
+
+|Caso de teste   | CT-21 - Teste de Criação de novo membro: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir criação de membros.  
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Membro". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
+|Critérios de Êxito | <ul> <li>A novo membro deve ser criada com sucesso e aparecer na lista de membros. </li> </ol>
+|Passos no Swagger | <ul> <li>Após preenchimento do Jason novo membro deve ser criada com sucesso apresentado o código 201. </li> 
+
+<br>
+
+|Caso de teste   | CT-22 Teste de filtro e pesquisa de menbros: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir editar membros. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma membro existente na lista. </li> <li> Clicar no botão "Editar". </li> <li>Realizar alterações nos campos desejados. </li><li> Clicar no botão "Salvar".</li> </ol>
+|Critérios de Êxito | <ul> <li>As alterações no membro devem ser salvas com sucesso. </li> 
+
+<br>
+
+|Caso de teste   | CT-23 -Teste de exclusão de membros:
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de membros. 
+|Objetivo do teste | Sistema permitir excluir membros. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um membro existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
+|Critérios de Êxito | <ul> <li>O membro selecionada deve ser excluída com sucesso.</li> 
+
+<br> 
+
+|Caso de teste   | CT-24 - Teste de Criação de novo fornecedor: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir criação de fornecedores.  
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Clicar no botão "Criar Adiciomas Novo Fornecedor". </li> <li> Preencher os campos obrigatórios. </li> <li>Clicar no botão "Salvar". </li> </ol>
+|Critérios de Êxito | <ul> <li>A novo fornecedor deve ser criada com sucesso e aparecer na lista de fornecedores. </li> </ol>
+|Passos no Swagger | <ul> <li>Após preenchimento do Jason novo fornecedor deve ser criada com sucesso apresentado o código 201. </li> 
+
+<br>
+
+|Caso de teste   | CT-25 Teste de filtro e pesquisa de fornecedores: 
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir editar fornecedores. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar uma fornecedor existente na lista. </li> <li> Clicar no botão "Editar". </li> <li>Realizar alterações nos campos desejados. </li><li> Clicar no botão "Salvar".</li> </ol>
+|Critérios de Êxito | <ul> <li>As alterações no fornecedor devem ser salvas com sucesso. </li> 
+
+<br>
+
+|Caso de teste   | CT-27 -Teste de exclusão de fornecedores:
+|------|-----------------------------------------|
+|Requisitos associados | RF-03​​  Gestão de fornecedores. 
+|Objetivo do teste | Sistema permitir excluir fornecedores. 
+|Passos | <ol><li> Acessar o painel de controle. </li> <li> Selecionar um fornecedor existente na lista. </li> <li> Clicar no botão "Excluir". </li> <li> Confirmar a exclusão quando solicitado. </li></ol>
+|Critérios de Êxito | <ul> <li>O fornecedor selecionada deve ser excluída com sucesso.</li> 
+
+<br>
+
 
 # Evidências de Testes de Software
 
