@@ -306,3 +306,39 @@ Plano de Testes: Funcionalidade de Gestão de Contas
 
 ### CT-11 - Teste de exclusão de fornecedor existente
 ![Figura 1](img/teste-exclusao-fornecedor-exixtente.jpeg)
+
+### CT-13 - CT-01 - Teste de Login com Credenciais Válidas
+![Figura 1](img/tela1.jpg)
+
+### CT-14 - Teste de Criação de nova conta
+![Figura 1](img/tela2.png)
+![Figura 1](img/tela3.png)
+![Figura 1](img/tela4.png)
+
+### CT-15 - Teste de edição de conta existente
+![Figura 1](img/tela5.png)
+![Figura 1](img/tela6.png)
+
+### CT-16 - Teste de criação de novo membro 
+![Figura 1](img/tela9.png)
+![Figura 1](img/tela10.png)
+![Figura 1](img/tela11.png)
+
+### CT-17 - Teste de edição de membro existente
+![Figura 1](img/tela12.png)
+
+### CT-18 - Teste de exclusão de membro existente
+![Figura 1](img/tela13.png)
+![Figura 1](img/tela14.png)
+
+### CT-19 - Teste de criação de novo fornecedor 
+![Figura 1](img/tela15.png)
+![Figura 1](img/tela16.png)
+![Figura 1](img/tela17.png)
+
+### CT-10 - Teste de edição de fornecedor existente
+![Figura 1](img/tela18.png)
+
+### CT-11 - Teste de exclusão de fornecedor existente
+![Figura 1](img/tela19.png)
+![Figura 1](img/tela20.png)
