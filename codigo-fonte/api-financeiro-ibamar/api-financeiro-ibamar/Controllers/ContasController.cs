@@ -1,5 +1,6 @@
 ﻿using api_financeiro_ibamar.Context;
 using api_financeiro_ibamar.Models;
+using api_financeiro_ibamar.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,9 +15,11 @@ namespace api_financeiro_ibamar.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+
         public ContasController(ApplicationDbContext context)
         {
             _context = context;
+            
         }
 
         // GET: api/Contas

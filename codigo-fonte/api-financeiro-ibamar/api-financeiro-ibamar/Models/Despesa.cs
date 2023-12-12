@@ -16,32 +16,31 @@ namespace api_financeiro_ibamar.Models
         [Required(ErrorMessage = "Obrigatório Informar o Nome!")]
         public double Valor { get; set; }
 
-        //public DateTime DataLancamento { get; set; }
+        public DateTime DataLancamento { get; set; }
 
         [Required(ErrorMessage = "Obrigatório Informar a Data de Vencimento!")]
         public DateTime DataVencimento { get; set; }
 
         public DateTime DataPagamento { get; set; }
 
-        //public Usuario Usuario { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório Informar o Usuario!")]
-        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
 
         [JsonIgnore]
-        public virtual Fornecedor Fornecedor { get; set; }
+        public int UsuarioId { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório Informar o Fornecedor!")]
+        public Fornecedor Fornecedor { get; set; }
+
+        [JsonIgnore]
         public int FornecedorId { get; set; }
 
-        // Categoria Categoria { get; set; }
+        public Categoria Categoria { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório Informar a Categoria!")]
+        [JsonIgnore]
         public int CategoriaId { get; set; }
 
-        //public Conta Conta { get; set; }
+        public Conta Conta { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório Informar a Conta!")]
+        [JsonIgnore]
         public int ContaId { get; set; }
     }
 }

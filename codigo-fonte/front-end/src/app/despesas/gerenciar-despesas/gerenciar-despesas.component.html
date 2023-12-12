@@ -1,68 +1,68 @@
 <section class="container">
   <header class="header">
-    <h2>Despesa {{ despesa.id ? '# '+ despesa.id : '' }} </h2>
+    <h2>Despesa {{ despesaDTO.id ? '# '+ despesaDTO.id : '' }} </h2>
   </header>
 
   <form>
-    <div class="mb-3">
-      <label class="form-label" for="descricao">Descrição</label>
-      <input type="text" [(ngModel)]="despesa.descricao" class="form-control" name="descricao" required />
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <label class="form-label" for="descricao">Descrição</label>
+        <input type="text" [(ngModel)]="despesaDTO.descricao" class="form-control" name="descricao" required />
+      </div>
+  
+      <div class="col-md-3 mb-3">
+        <label class="form-label" for="valor">Valor</label>
+        <input type="text" [(ngModel)]="despesaDTO.valor" class="form-control" name="valor" required />
+      </div>
+  
+      <div class="col-md-3 mb-3">
+        <label class="form-label" for="dataVencimento">Data de Vencimento</label>
+        <input type="date" [(ngModel)]="dateVencimento" class="form-control" name="dataVencimento" required />
+      </div>
+  
+      <div class="col-md-3 mb-3">
+        <label class="form-label" for="dataPagamento">Data de Pagamento</label>
+        <input type="date" [(ngModel)]="datePagamento" class="form-control" name="dataPagamento" required />
+      </div>
     </div>
+    
+    
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="fornecedor">Fornecedor</label>
+        <select name="fornecedor" [(ngModel)]="despesaDTO.fornecedorId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let fornecedor of listaFornecedor" value="{{ fornecedor.id }}">
+              {{ fornecedor.razaoSocial }}
+            </option>
+          </select>
+      </div>
+  
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="categoria">Categoria</label>
+        <select name="categoria" [(ngModel)]="despesaDTO.categoriaId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
+              {{ categoria.descricao }}
+            </option>
+          </select>
+      </div>
+  
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="conta">Conta</label>
+        <select name="conta" [(ngModel)]="despesaDTO.contaId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
+              {{ conta.descricao }}
+            </option>
+          </select>
+      </div>
+    </div>
+    
 
-    <div class="mb-3">
-      <label class="form-label" for="valor">Valor</label>
-      <input type="text" [(ngModel)]="despesa.valor" class="form-control" name="valor" required />
-    </div>
 
-    <div class="mb-3">
-      <label class="form-label" for="dataPagamento">Data de Pagamento</label>
-      <input type="date" [(ngModel)]="despesa.dataPagamento" class="form-control" name="dataPagamento" required />
-    </div>
 
-    <div class="mb-3">
-      <label class="form-label" for="dataPagamento">Data de Vencimento</label>
-      <input type="date" [(ngModel)]="despesa.dataVencimento" class="form-control" name="dataPagamento" required />
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="usuario">Usuário</label>
-      <select name="usuario" [(ngModel)]="despesa.usuarioId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let usuario of listaUsuarios" value="{{ usuario.id }}">
-            {{ usuario.nome }}
-          </option>
-        </select>
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="fornecedor">Fornecedor</label>
-      <select name="fornecedor" [(ngModel)]="despesa.fornecedorId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let fornecedor of listaFornecedor" value="{{ fornecedor.id }}">
-            {{ fornecedor.razaoSocial }}
-          </option>
-        </select>
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="categoria">Categoria</label>
-      <select name="categoria" [(ngModel)]="despesa.categoriaId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
-            {{ categoria.descricao }}
-          </option>
-        </select>
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="conta">Conta</label>
-      <select name="conta" [(ngModel)]="despesa.contaId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
-            {{ conta.descricao }}
-          </option>
-        </select>
-    </div>
+    
 
     <button (click)="salvarDespesa()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
     <button (click)="cancelarDespesa()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>

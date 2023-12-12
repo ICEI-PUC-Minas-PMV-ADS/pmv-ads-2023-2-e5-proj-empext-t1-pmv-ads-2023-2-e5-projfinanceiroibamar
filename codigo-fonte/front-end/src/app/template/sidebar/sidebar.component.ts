@@ -98,17 +98,28 @@ export class SidebarComponent {
   ]*/
 
   menuSidebar = [
-    {
+    /*{
+      link_name: "Dashboard",
+      link: "/dashboard",
+      icon: "bx bx-grid-alt",
+      sub_menu: []
+    },*/{
       link_name: "Cadastro",
       link: null,
       icon: "bx bx-collection",
       sub_menu: [
         {
-          link_name: "Membros",
-          link: "/membros",
+          link_name: "Categorias",
+          link: "/categorias",
+        }, {
+          link_name: "Contas",
+          link: "/contas",
         }, {
           link_name: "Fornecedores",
           link: "/fornecedores",
+        }, {
+          link_name: "Membros",
+          link: "/membros",
         }
       ]
     }, {
@@ -117,12 +128,6 @@ export class SidebarComponent {
       icon: "bx bx-pie-chart-alt-2",
       sub_menu: [
         {
-          link_name: "Conta",
-          link: "/contas",
-        }, {
-          link_name: "Categorias",
-          link: "/categorias",
-        }, {
           link_name: "Receitas",
           link: "/receitas",
         }
@@ -131,13 +136,29 @@ export class SidebarComponent {
           link: "/despesas",
         }
       ]
+    },{
+      link_name: "Relatórios",
+      link: null,
+      icon: "bx bx-plug",
+      sub_menu: [
+        {
+          link_name: "Receitas",
+          link: "/relatorios/receitas",
+        }, {
+          link_name: "Despesas",
+          link: "/relatorios/despesas",
+        }, {
+          link_name: "Mensal",
+          link: "/relatorios/mensal",
+        }
+      ]
     }, {
       link_name: "Configurações",
       link: "null",
       icon: "bx bx-cog",
       sub_menu: [
         {
-          link_name: "Usuarios",
+          link_name: "Usuários",
           link: "/usuarios",
         }
       ]

@@ -53,5 +53,31 @@ export class ListarDespesasComponent {
       }
     }
   }
+
+  formatDate(date: any): string {
+    const today = new Date(date);
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+
+    const formattedToday = this.lpad(dd,2) + '/' + this.lpad(mm,2) + '/' + yyyy;
+    return formattedToday
+  }
+
+  lpad(num:number, size:number): string {
+    let s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+  }
+
+  formatNumber(num:any): string {
+    // Specifying options for formatting
+    const options = {
+      style: 'decimal',  // Other options: 'currency', 'percent', etc.
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    };
+    return num.toLocaleString('en-US', options);
+  }
 }
 

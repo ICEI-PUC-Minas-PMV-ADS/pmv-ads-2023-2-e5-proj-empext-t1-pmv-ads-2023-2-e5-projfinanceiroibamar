@@ -8,12 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './gerenciar-categorias.component.html',
   styleUrls: ['./gerenciar-categorias.component.css']
 })
+
 export class GerenciarCategoriasComponent {
   categoria: Categoria = {
     descricao: '',
   };
-
-
 
   constructor(
     private categoriaService: CategoriaService,

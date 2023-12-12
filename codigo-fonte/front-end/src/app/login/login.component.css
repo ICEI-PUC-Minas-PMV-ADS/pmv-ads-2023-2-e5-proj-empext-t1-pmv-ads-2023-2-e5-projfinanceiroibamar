@@ -4,6 +4,12 @@
   color: #ffffff;
 }
 
+h1, h4 {
+  color: #025159;
+  font-weight: bold;
+}
+
+
 .label {
   color: #025159;
   font-weight: bold;
@@ -18,4 +24,12 @@
   background-color: #025159;
   color: #ffffff;
   font-weight: bold;
+}
+
+
+.container img {
+  max-width:400px;
+  max-height:400px;
+  width: auto;
+  height: auto;
 }

@@ -3,7 +3,7 @@
         <h2>Fornecedor {{ fornecedor.id ? '# '+ fornecedor.id : '' }} </h2>
     </header>
 
-    <form>
+    <form class="form" #fornecedorForm="ngForm">
         <div class="col-md-12 col-lg-12 col-xl-12 offset-xl-1">
             <div class="row">
                 <div class="col-md-2 mb-3">
@@ -12,7 +12,7 @@
                         <option selected></option>
                         <option>Física</option>
                         <option>Jurídica</option>
-                      </select>
+                    </select>
                 </div>
                 <div class="col-md-3 mb-3">
                         <label class="form-label" for="cpf">CPF</label>
@@ -93,7 +93,8 @@
 
 
 
-            <button (click)="salvarFornecedor()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
+            <button (click)="salvarFornecedor()" type="button" class="btn btn-success btn-lg ms-2"
+            [disabled]="!fornecedorForm.form.valid">Salvar</button>
             <button (click)="cancelarFornecedor()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>
 
         </div>

@@ -36,7 +36,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("categorias");
+                    b.ToTable("categorias", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Conta", b =>
@@ -56,7 +56,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("contas");
+                    b.ToTable("contas", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Despesa", b =>
@@ -105,7 +105,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Despesas");
+                    b.ToTable("Despesas", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Fornecedor", b =>
@@ -162,7 +162,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Fornecedores");
+                    b.ToTable("Fornecedores", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Membro", b =>
@@ -226,7 +226,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Membros");
+                    b.ToTable("Membros", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Receita", b =>
@@ -272,7 +272,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Receitas");
+                    b.ToTable("Receitas", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Usuario", b =>
@@ -305,7 +305,7 @@ namespace api_financeiro_ibamar.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("usuarios");
+                    b.ToTable("usuarios", (string)null);
                 });
 
             modelBuilder.Entity("api_financeiro_ibamar.Models.Despesa", b =>

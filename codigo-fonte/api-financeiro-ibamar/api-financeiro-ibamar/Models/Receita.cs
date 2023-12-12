@@ -23,26 +23,25 @@ namespace api_financeiro_ibamar.Models
         [Required(ErrorMessage = "Obrigatório Informar a Data de Vencimento!")]
         public DateTime DataRecebimento { get; set; }
 
-        //[JsonIgnore]
-        //public Usuario Usuario { get; set; }
+        
+        public Usuario Usuario { get; set; }
 
+        [JsonIgnore]
         public int UsuarioId { get; set; }
 
-        //[JsonIgnore]
-        //public Membro Membro { get; set; }
+        public Membro Membro { get; set; }
 
-        
+        [JsonIgnore]
         public int MembroId { get; set; }
-
-        //[JsonIgnore]
-        //public Categoria Categoria { get; set; }
-
         
+        public Categoria Categoria { get; set; }
+
+        [JsonIgnore]
         public int CategoriaId { get; set; }
 
-        //[JsonIgnore]
-        //public Conta Conta { get; set; }
+        public Conta Conta { get; set; }
 
+        [JsonIgnore]
         public int ContaId { get; set; }
 
     }

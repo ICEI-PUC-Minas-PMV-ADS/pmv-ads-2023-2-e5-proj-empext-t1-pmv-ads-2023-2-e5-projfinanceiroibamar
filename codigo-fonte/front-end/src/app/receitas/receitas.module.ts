@@ -8,6 +8,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { ReceitasRoutingModule } from './receitas-routing.module';
 import { ListarReceitasComponent } from './listar-receitas/listar-receitas.component';
 import { GerenciarReceitasComponent } from './gerenciar-receitas/gerenciar-receitas.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GerenciarReceitasComponent } from './gerenciar-receitas/gerenciar-recei
     FormsModule,
     RouterModule,
     TemplateModule,
-    DataTablesModule
+    DataTablesModule,
+    SharedModule,
   ]
 })
 export class ReceitasModule { }

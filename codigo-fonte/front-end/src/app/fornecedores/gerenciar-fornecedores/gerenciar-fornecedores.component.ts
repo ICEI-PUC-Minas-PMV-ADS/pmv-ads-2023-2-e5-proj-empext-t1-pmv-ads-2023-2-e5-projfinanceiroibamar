@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Fornecedor } from '../fornecedor';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FornecedorService } from '../fornecedor.service';
 import { CepServiceService } from 'src/app/cep/cep-service.service';
 import { Cep } from 'src/app/cep/cep';
@@ -17,6 +17,7 @@ export class GerenciarFornecedoresComponent {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private fornecedorService: FornecedorService,
     private cepService: CepServiceService
   ){
@@ -24,7 +25,13 @@ export class GerenciarFornecedoresComponent {
     this.senhaConfirmacao ='';
    }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) { //edicao
+      this.fornecedorService.buscarPorId(parseInt(id)).subscribe((fornecedor)=>{
+        this.fornecedor = fornecedor;
+      })
+    }
   }
 
   consultaCep(){

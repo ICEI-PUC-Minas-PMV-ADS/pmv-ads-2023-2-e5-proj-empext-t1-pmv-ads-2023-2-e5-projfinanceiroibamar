@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AuthService } from './auth.service';
 import { TokenInterceptor } from './token.interceptor';
-import { NgxMaskModule } from "ngx-mask";
+import { NgxMaskModule, IConfig } from "ngx-mask";
 import { PrincipalComponent } from './principal/principal.component';
 import { ContasModule } from './contas/contas.module';
 import { CategoriasModule } from './categorias/categorias.module';
@@ -19,7 +19,9 @@ import { MembrosModule } from './membros/membros.module';
 import { FornecedoresModule } from './fornecedores/fornecedores.module';
 import { ReceitasModule } from './receitas/receitas.module';
 import { DespesasModule } from './despesas/despesas.module';
+import { RelatoriosModule } from './relatorios/relatorios.module';
 
+export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { DespesasModule } from './despesas/despesas.module';
     MembrosModule,
     FornecedoresModule,
     ReceitasModule,
-    DespesasModule
+    DespesasModule,
+    RelatoriosModule
   ],
   providers: [
     AuthService,

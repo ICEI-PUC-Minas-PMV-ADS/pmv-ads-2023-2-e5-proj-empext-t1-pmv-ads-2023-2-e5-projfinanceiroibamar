@@ -10,13 +10,19 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "DotNetEnv": "2.5.0",
+          "FastReport.OpenSource": "2024.1.1",
+          "FastReport.OpenSource.Export.PdfSimple": "2024.1.1",
+          "FastReport.OpenSource.Web": "2024.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.5",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.CodeAnalysis.Common": "4.0.1",
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.3.23174.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-preview.3.23174.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.23",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.3.23174.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "FastReport.Compat.Reference": "2024.1.0.0"
         },
         "runtime": {
           "api-financeiro-ibamar.dll": {}
@@ -75,6 +81,55 @@
           "lib/netstandard1.3/DotNetEnv.dll": {
             "assemblyVersion": "2.5.0.0",
             "fileVersion": "2.5.0.0"
+          }
+        }
+      },
+      "FastReport.Compat/2024.1.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp": "4.0.0",
+          "Microsoft.CodeAnalysis.VisualBasic": "3.3.1",
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtimeTargets": {
+          "runtimes/any/lib/netcoreapp3.0/FastReport.Compat.dll": {
+            "rid": "any",
+            "assetType": "runtime",
+            "assemblyVersion": "2024.1.0.0",
+            "fileVersion": "2024.1.0.0"
+          }
+        }
+      },
+      "FastReport.OpenSource/2024.1.1": {
+        "dependencies": {
+          "FastReport.Compat": "2024.1.0",
+          "System.Drawing.Common": "6.0.0",
+          "System.Security.Cryptography.Pkcs": "5.0.0",
+          "System.Security.Permissions": "6.0.0",
+          "System.Text.Encoding.CodePages": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FastReport.dll": {
+            "assemblyVersion": "2024.1.1.0",
+            "fileVersion": "2024.1.1.0"
+          }
+        }
+      },
+      "FastReport.OpenSource.Export.PdfSimple/2024.1.1": {
+        "dependencies": {
+          "FastReport.OpenSource": "2024.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FastReport.OpenSource.Export.PdfSimple.dll": {
+            "assemblyVersion": "2024.1.1.0",
+            "fileVersion": "2024.1.1.0"
+          }
+        }
+      },
+      "FastReport.OpenSource.Web/2024.1.1": {
+        "runtime": {
+          "lib/net6.0/FastReport.OpenSource.Web.dll": {
+            "assemblyVersion": "2024.1.1.0",
+            "fileVersion": "2024.1.1.0"
           }
         }
       },
@@ -655,6 +710,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "8.0.0-preview.3.23174.8"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0-preview.3.23174.8"
+        }
+      },
       "Microsoft.AspNetCore.Razor.Language/6.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
@@ -711,7 +777,7 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Common/4.0.0": {
+      "Microsoft.CodeAnalysis.Common/4.0.1": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.3.2",
           "System.Collections.Immutable": "6.0.0",
@@ -724,7 +790,7 @@
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
             "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.21.51404"
+            "fileVersion": "4.0.121.55815"
           }
         },
         "resources": {
@@ -771,7 +837,7 @@
       },
       "Microsoft.CodeAnalysis.CSharp/4.0.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "4.0.0"
+          "Microsoft.CodeAnalysis.Common": "4.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
@@ -826,7 +892,7 @@
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.0.0",
-          "Microsoft.CodeAnalysis.Common": "4.0.0",
+          "Microsoft.CodeAnalysis.Common": "4.0.1",
           "Microsoft.CodeAnalysis.Features": "4.0.0",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.0.0"
         },
@@ -882,7 +948,7 @@
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
-          "Microsoft.CodeAnalysis.Common": "4.0.0",
+          "Microsoft.CodeAnalysis.Common": "4.0.1",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.0.0"
         },
         "runtime": {
@@ -936,7 +1002,7 @@
       "Microsoft.CodeAnalysis.Features/4.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.AnalyzerUtilities": "3.3.0",
-          "Microsoft.CodeAnalysis.Common": "4.0.0",
+          "Microsoft.CodeAnalysis.Common": "4.0.1",
           "Microsoft.CodeAnalysis.Scripting.Common": "4.0.0",
           "Microsoft.CodeAnalysis.Workspaces.Common": "4.0.0",
           "Microsoft.DiaSymReader": "1.3.0",
@@ -995,7 +1061,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.0",
           "Microsoft.CodeAnalysis.CSharp": "4.0.0",
-          "Microsoft.CodeAnalysis.Common": "4.0.0"
+          "Microsoft.CodeAnalysis.Common": "4.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {
@@ -1006,7 +1072,7 @@
       },
       "Microsoft.CodeAnalysis.Scripting.Common/4.0.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "4.0.0"
+          "Microsoft.CodeAnalysis.Common": "4.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Scripting.dll": {
@@ -1056,11 +1122,63 @@
           }
         }
       },
+      "Microsoft.CodeAnalysis.VisualBasic/3.3.1": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.CodeAnalysis.VisualBasic.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.300.119.46211"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.Workspaces.Common/4.0.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
-          "Microsoft.CodeAnalysis.Common": "4.0.0",
+          "Microsoft.CodeAnalysis.Common": "4.0.1",
           "System.Composition": "1.0.31",
           "System.IO.Pipelines": "5.0.1"
         },
@@ -2927,6 +3045,14 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "FastReport.Compat.Reference/2024.1.0.0": {
+        "runtime": {
+          "FastReport.Compat.dll": {
+            "assemblyVersion": "2024.1.0.0",
+            "fileVersion": "2024.1.0.0"
+          }
+        }
       }
     }
   },
@@ -2963,6 +3089,34 @@
       "sha512": "sha512-BjRAEr3fBXo0+1rbC5Z1NTcYH2z+qnjROXKisR78VtL87UAlseelvg0N3aMAk5Bexuph13IKEmxVk5b9CrpdWw==",
       "path": "dotnetenv/2.5.0",
       "hashPath": "dotnetenv.2.5.0.nupkg.sha512"
+    },
+    "FastReport.Compat/2024.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y+GEeXCTOE5NExGZ6tigCNpvGzz6yjGl8JVv0crp/YP8/3oh160TGuK/U+73fNEZbKw/OWjkFjaXHw/RdxI12w==",
+      "path": "fastreport.compat/2024.1.0",
+      "hashPath": "fastreport.compat.2024.1.0.nupkg.sha512"
+    },
+    "FastReport.OpenSource/2024.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hehmkohaPtuYHGuQE2NfZAgoE7i5YGsEGEbLpaRNXLpCOAP12mVnEtRgJWf3WHl9QwZ5UV6+vMN+Len9WW2+9g==",
+      "path": "fastreport.opensource/2024.1.1",
+      "hashPath": "fastreport.opensource.2024.1.1.nupkg.sha512"
+    },
+    "FastReport.OpenSource.Export.PdfSimple/2024.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbUlwRCy8GTuN4NJFL5tVkEB3RfGV74WH4qL3z772AWokebpFb3tWa88Rv5zSPGiK7MlhEFkpnUqv5GEa5rjTw==",
+      "path": "fastreport.opensource.export.pdfsimple/2024.1.1",
+      "hashPath": "fastreport.opensource.export.pdfsimple.2024.1.1.nupkg.sha512"
+    },
+    "FastReport.OpenSource.Web/2024.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rkD9Uf3CDzlyN99jWH7zzodUKH48k15Pt/610M0uY+LcyVFrLKkIynXaOoao6DtTd8HfpFddbm3fzgtdX02kfQ==",
+      "path": "fastreport.opensource.web/2024.1.1",
+      "hashPath": "fastreport.opensource.web.2024.1.1.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
@@ -3342,6 +3496,20 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.5",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.5.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Language/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3384,12 +3552,12 @@
       "path": "microsoft.codeanalysis.analyzerutilities/3.3.0",
       "hashPath": "microsoft.codeanalysis.analyzerutilities.3.3.0.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Common/4.0.0": {
+    "Microsoft.CodeAnalysis.Common/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-d02ybMhUJl1r/dI6SkJPHrTiTzXBYCZeJdOLMckV+jyoMU/GGkjqFX/sRbv1K0QmlpwwKuLTiYVQvfYC+8ox2g==",
-      "path": "microsoft.codeanalysis.common/4.0.0",
-      "hashPath": "microsoft.codeanalysis.common.4.0.0.nupkg.sha512"
+      "sha512": "sha512-SMREwaVD5SzatlWhh9aahQAtSWdb63NcE//f+bQzgHSECU6xtDtaxk0kwV+asdFfr6HtW38UeO6jvqdfzudg3w==",
+      "path": "microsoft.codeanalysis.common/4.0.1",
+      "hashPath": "microsoft.codeanalysis.common.4.0.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp/4.0.0": {
       "type": "package",
@@ -3432,6 +3600,13 @@
       "sha512": "sha512-jU/ncoHSFnXU/L2iju9AFlOwmsAYByIxhCCpeLPNTguXwosJp1o13mtrboJOfkDhi7ebvzQmvcZ++yBu8cF4Sw==",
       "path": "microsoft.codeanalysis.scripting.common/4.0.0",
       "hashPath": "microsoft.codeanalysis.scripting.common.4.0.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.VisualBasic/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F7fc/G+0ocOYkKSCJ7Y8Q7eAEkAdG5RYODI9FtSl2Hm8zIDBVA3NccCm98gaOvCamLfMHYqeOjpb3yJnnw3m/w==",
+      "path": "microsoft.codeanalysis.visualbasic/3.3.1",
+      "hashPath": "microsoft.codeanalysis.visualbasic.3.3.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Workspaces.Common/4.0.0": {
       "type": "package",
@@ -4636,6 +4811,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "FastReport.Compat.Reference/2024.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

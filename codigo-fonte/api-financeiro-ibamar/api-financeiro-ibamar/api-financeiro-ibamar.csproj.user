@@ -12,5 +12,6 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>api_financeiro_ibamar.Context.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+    <NameOfLastUsedPublishProfile>C:\Desenvolvimento\pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-projfinanceiroibamar\codigo-fonte\api-financeiro-ibamar\api-financeiro-ibamar\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURLBase: 'https://cloud.google.com/marioServe'
+  apiURLBase: 'https://vendamao.melopecas.com.br/services/appibamar-api/api'
 };

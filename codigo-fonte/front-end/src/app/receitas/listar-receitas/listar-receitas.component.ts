@@ -3,6 +3,7 @@ import { Receita } from '../receitas';
 import { Subject } from 'rxjs';
 import { ReceitaService } from '../receitas.service';
 import { LanguageApp } from 'src/app/internacionalizacao/internacionalizacao';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-listar-receitas',
@@ -19,7 +20,9 @@ export class ListarReceitasComponent {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
 
-  constructor(private receitaService: ReceitaService) { }
+  constructor(private receitaService: ReceitaService,
+    private sanitizer: DomSanitizer) 
+  { }
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -53,4 +56,31 @@ export class ListarReceitasComponent {
       }
     }
   }
+
+  formatDate(date: any): string {
+    const today = new Date(date);
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+
+    const formattedToday = this.lpad(dd,2) + '/' + this.lpad(mm,2) + '/' + yyyy;
+    return formattedToday
+  }
+
+  lpad(num:number, size:number): string {
+    let s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+  }
+
+  formatNumber(num:any): string {
+    // Specifying options for formatting
+    const options = {
+      style: 'decimal',  // Other options: 'currency', 'percent', etc.
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    };
+    return num.toLocaleString('en-US', options);
+  }
+
 }

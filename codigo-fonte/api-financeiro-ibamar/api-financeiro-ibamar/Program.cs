@@ -1,5 +1,6 @@
 using api_financeiro_ibamar;
 using api_financeiro_ibamar.Context;
+using api_financeiro_ibamar.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -7,10 +8,33 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+
+/*
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("https://ibamar-frontend.vercel.app",
+                                             "http://localhost:4200",
+                                             "https://vendamao.melopecas.com.br")
+                          .WithMethods("GET", "POST", "DELETE", "PUT")
+                          .WithHeaders() // <--- list the allowed headers here
+                          .AllowCredentials()
+                          .WithExposedHeaders("X-Pagination");
+                      });
+});*/
+
+
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<AuthenticatedUser>();
+
 
 // Add services to the container.
 
@@ -96,14 +120,22 @@ else
 
 app.UseHttpsRedirection();
 
-app.UseCors(x => x
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true) // allow any origin
-                .AllowCredentials()); // allow credentials
-
-
 app.UseAuthentication();
+app.UseStaticFiles();
+
+
+
+app.UseCors(x => x
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                /*.WithHeaders("X - CSRF - Token", "X - Requested - With", "Accept ", "Accept - Version", "Content - Length", "Content - MD5", "Content - Type", "Date", "X - Api - Version", "Authorization")
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()*/); // allow credentials
+
+
+//app.UseCors(MyAllowSpecificOrigins);
+
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,18 +1,64 @@
 <section class="container">
   <header class="header">
-    <h2>Receita {{ receita.id ? '# '+ receita.id : '' }} </h2>
+    <h2>Receita {{ receitaDTO.id ? '# '+ receitaDTO.id : '' }} </h2>
   </header>
 
   <form>
-    <div class="mb-3">
-      <label class="form-label" for="descricao">Descrição</label>
-      <input type="text" [(ngModel)]="receita.descricao" class="form-control" name="descricao" required />
-    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="descricao">Descrição</label>
+        <input type="text" [(ngModel)]="receitaDTO.descricao" class="form-control" name="descricao" required />
+      </div>
+  
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="valor">Valor</label>
+        <input type="text" [(ngModel)]="receitaDTO.valor" class="form-control" name="valor" required />
+      </div>
 
-    <div class="mb-3">
-      <label class="form-label" for="valor">Valor</label>
-      <input type="text" [(ngModel)]="receita.valor" class="form-control" name="valor" required />
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="dataRecebimento">Data de Recebimento</label>
+        <input type="date" [(ngModel)]="dateRecebimento" class="form-control" name="dataRecebimento" required />
+      </div>
     </div>
+    <!--
+    <h2>{{ receitaDTO.dataRecebimento | dateFormat: 'DDDD, MMMM' }}</h2>
+    <h2>{{ receitaDTO.dataRecebimento | dateFormat: 'DDD, MMM' }}</h2>
+    <h2>{{ receitaDTO.dataRecebimento | dateFormat: 'yyyy-MM-DD' }}</h2>
+    <h2>{{ receitaDTO.dataRecebimento | dateFormat: 'DDDD, MMMM' }}</h2>
+    -->
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="membro">Membro</label>
+        <select name="membro" [(ngModel)]="receitaDTO.membroId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let membro of listaMembros" value="{{ membro.id }}">
+              {{ membro.nome }}
+            </option>
+          </select>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="categoria">Categoria</label>
+        <select name="categoria" [(ngModel)]="receitaDTO.categoriaId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
+              {{ categoria.descricao }}
+            </option>
+          </select>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label class="form-label" for="conta">Conta</label>
+        <select name="conta" [(ngModel)]="receitaDTO.contaId" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
+              {{ conta.descricao }}
+            </option>
+          </select>
+      </div>
+    </div>
+    
 
     <!--<div class="mb-3">
       <label class="form-label" for="dataLancamento">Data de Lançamento</label>
@@ -20,11 +66,8 @@
     </div>
   -->
 
-    <div class="mb-3">
-      <label class="form-label" for="dataRecebimento">Data de Recebimento</label>
-      <input type="date" [(ngModel)]="receita.dataRecebimento" class="form-control" name="dataRecebimento" required />
-    </div>
-
+    
+<!--
     <div class="col-md-12 mb-3">
       <label class="form-label" for="usuario">Usuário</label>
       <select name="usuario" [(ngModel)]="receita.usuarioId" class="form-select" aria-label="Default select example">
@@ -34,37 +77,7 @@
           </option>
         </select>
     </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="membro">Membro</label>
-      <select name="membro" [(ngModel)]="receita.membroId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let membro of listaMembros" value="{{ membro.id }}">
-            {{ membro.nome }}
-          </option>
-        </select>
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="categoria">Categoria</label>
-      <select name="categoria" [(ngModel)]="receita.categoriaId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
-            {{ categoria.descricao }}
-          </option>
-        </select>
-    </div>
-
-    <div class="col-md-12 mb-3">
-      <label class="form-label" for="conta">Conta</label>
-      <select name="conta" [(ngModel)]="receita.contaId" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
-            {{ conta.descricao }}
-          </option>
-        </select>
-    </div>
-
+ -->
     <button (click)="salvarReceita()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
     <button (click)="cancelarReceita()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>
   </form>

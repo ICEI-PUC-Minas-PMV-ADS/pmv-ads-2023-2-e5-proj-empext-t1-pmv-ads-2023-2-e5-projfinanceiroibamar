@@ -3,16 +3,21 @@
     <h2>Conta {{ conta.id ? '# '+ conta.id : '' }} </h2>
   </header>
 
-  <form>
+  <form class="form" #contaForm="ngForm">
     <div class="col-md-12 col-lg-12 col-xl-12 offset-xl-1">
       <div class="mb-3">
         <label for="descricao" class="form-label">Descrição</label>
-        <textarea [(ngModel)]="conta.descricao" class="form-control" name="descricao"
-          rows="3"></textarea>
+        <input [(ngModel)]="conta.descricao" class="form-control" name="descricao" id="descricao"
+        required minlength="3" #descricao="ngModel"/>
+        <div [hidden]="descricao.valid || descricao.pristine"
+          class="alert alert-danger">
+                A descrição é obrigatória
+        </div>
       </div>
 
 
-      <button (click)="salvarConta()" type="button" class="btn btn-success btn-lg ms-2">Salvar</button>
+      <button (click)="salvarConta()" type="button" class="btn btn-success btn-lg ms-2"
+      [disabled]="!contaForm.form.valid">Salvar</button>
       <button (click)="cancelarConta()" type="button" class="btn btn-danger btn-lg ms-2">Cancelar</button>
 
     </div>

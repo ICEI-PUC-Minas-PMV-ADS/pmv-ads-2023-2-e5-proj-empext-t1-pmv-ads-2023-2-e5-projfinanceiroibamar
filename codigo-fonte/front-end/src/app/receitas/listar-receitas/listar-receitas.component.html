@@ -10,21 +10,25 @@
     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table align-middle mb-0 bg-white">
       <thead class="bg-light">
         <tr>
-          <th>Id</th>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <!--<th>Data de Lançamento</th>-->
-          <th>Data de Recebimento</th>
-          <th>Actions</th>
+          <th style="width: 5%">Id</th>
+          <th style="width: 20%">Membro</th>
+          <th style="width: 10%">Conta</th>
+          <th style="width: 10%">Categoria</th>
+          <th style="width: 25%">Descrição</th>
+          <th style="width: 10%">Valor</th>
+          <th style="width: 10%">Data de Recebimento</th>
+          <th style="width: 10%">Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let receita of listaReceitas">
           <td>{{ receita.id }}</td>
+          <td>{{ receita.membro?.nome }}</td>
+          <td>{{ receita.conta?.descricao }}</td>
+          <td>{{ receita.categoria?.descricao }}</td>
           <td>{{ receita.descricao }}</td>
-          <td>{{ receita.valor }}</td>
-          <!--<td>{{ receita.dataLancamento | date }}</td>-->
-          <td>{{ receita.dataRecebimento | date }}</td>
+          <td>R$ {{ formatNumber(receita.valor) }}</td>
+          <td>{{ formatDate(receita.dataRecebimento) }}</td>
           <td>
             <button type="button" class="btn btn-warning btn-floating ms-1"
               routerLink="/receitas/editar/{{ receita.id }}">
@@ -69,4 +73,3 @@
     </div>
   </div>
 </div>
-

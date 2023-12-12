@@ -1,0 +1,66 @@
+<section class="container">
+    <header class="header py-2">
+        <div class="d-flex justify-content-between">
+        <h2>Relatório de Despesas</h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reportModal" (click)="relatorioDespesas()">Gerar PDF</button>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="dataInicio">Data Inicial</label>
+          <input type="date" [(ngModel)]="relatorioDespesaDTO.dataInicio" class="form-control" name="dataInicio" required />
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="dataFim">Data Final</label>
+          <input type="date" [(ngModel)]="relatorioDespesaDTO.dataFim" class="form-control" name="dataFim" required />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="fornecedor">Fornecedor</label>
+          <select name="fornecedor" [(ngModel)]="relatorioDespesaDTO.fornecedorId" class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option *ngFor="let fornecedor of listaFornecedors" value="{{ fornecedor.id }}">
+                {{ fornecedor.razaoSocial }}
+              </option>
+            </select>
+        </div>
+  
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="categoria">Categoria</label>
+          <select name="categoria" [(ngModel)]="relatorioDespesaDTO.categoriaId" class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option *ngFor="let categoria of listaCategorias" value="{{ categoria.id }}">
+                {{ categoria.descricao }}
+              </option>
+            </select>
+        </div>
+  
+        <div class="col-md-4 mb-3">
+          <label class="form-label" for="conta">Conta</label>
+          <select name="conta" [(ngModel)]="relatorioDespesaDTO.contaId" class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option *ngFor="let conta of listaConta" value="{{ conta.id }}">
+                {{ conta.descricao }}
+              </option>
+            </select>
+        </div>
+      </div>
+</section>
+
+
+<div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="min-width: 90%; min-height: 90%; height: 90%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="reportModalLabel">Relatório de Despesas</h1>
+        </div>
+        <div class="modal-body">
+          <iframe [src]="pdfSrc" width="100%" height="600" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>

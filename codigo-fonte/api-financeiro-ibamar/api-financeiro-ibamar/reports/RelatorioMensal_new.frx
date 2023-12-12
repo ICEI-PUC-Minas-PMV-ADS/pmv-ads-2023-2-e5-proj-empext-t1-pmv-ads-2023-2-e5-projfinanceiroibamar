@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/12/2023 00:04:05" ReportInfo.Modified="12/12/2023 01:00:11" ReportInfo.CreatorVersion="2024.1.0.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="despesaContaCategoria" ReferenceName="despesaContaCategoria" DataType="System.Int32" Enabled="true">
+      <Column Name="Tipo" DataType="System.String"/>
+      <Column Name="Conta" DataType="System.String"/>
+      <Column Name="Categoria" DataType="System.String"/>
+      <Column Name="Total" DataType="System.Double"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="despesaContaCategoriaDetalhe" ReferenceName="despesaContaCategoriaDetalhe" DataType="System.Int32" Enabled="true">
+      <Column Name="Tipo" DataType="System.String"/>
+      <Column Name="Conta" DataType="System.String"/>
+      <Column Name="Categoria" DataType="System.String"/>
+      <Column Name="Descricao" DataType="System.String"/>
+      <Column Name="DataPagamento" DataType="System.DateTime"/>
+      <Column Name="Total" DataType="System.Double"/>
+    </BusinessObjectDataSource>
+    <Total Name="TotalCategoria" Expression="[despesaContaCategoriaDetalhe.Total]" Evaluator="Data1" PrintOn="GroupFooter2"/>
+    <Total Name="TotalConta" Expression="[despesaContaCategoriaDetalhe.Total]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalGeral" Expression="[despesaContaCategoriaDetalhe.Total]" Evaluator="Data1" PrintOn="PageFooter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" Watermark.Font="Arial, 60pt" LastPageSource="15" FirstPageSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="756" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.13" Width="756" Height="28.35">
+      <TextObject Name="Text5" Left="103.95" Width="245.7" Height="18.9" Text="Descricao" Font="Arial, 10pt"/>
+      <TextObject Name="Text7" Left="453.6" Width="94.5" Height="18.9" Text="DataPagamento" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="652.05" Width="94.5" Height="18.9" Text="Total" Font="Arial, 10pt"/>
+      <TextObject Name="Text2" Left="359.1" Width="94.5" Height="18.9" Text="Total" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="72.82" Width="756" Height="18.9" Condition="[despesaContaCategoriaDetalhe.Conta]" SortOrder="Descending">
+      <TextObject Name="Text1" Width="226.8" Height="18.9" Text="[despesaContaCategoriaDetalhe.Conta]" Font="Arial, 10pt, style=Bold"/>
+      <GroupHeaderBand Name="GroupHeader2" Top="95.05" Width="756" Height="18.9" Condition="[despesaContaCategoriaDetalhe.Categoria]">
+        <TextObject Name="Text10" Left="18.9" Width="236.25" Height="18.9" Text="[despesaContaCategoriaDetalhe.Categoria]" Font="Arial, 10pt, style=Bold"/>
+        <DataBand Name="Data1" Top="117.28" Width="756" Height="18.9" DataSource="despesaContaCategoriaDetalhe">
+          <TextObject Name="Text4" Left="103.95" Width="245.7" Height="18.9" Text="[despesaContaCategoriaDetalhe.Descricao]" Font="Arial, 10pt"/>
+          <TextObject Name="Text6" Left="453.6" Width="94.5" Height="18.9" Text="[despesaContaCategoriaDetalhe.DataPagamento]" Format="Date" Format.Format="d" Font="Arial, 10pt"/>
+          <TextObject Name="Text8" Left="652.05" Width="94.5" Height="18.9" Text="[despesaContaCategoriaDetalhe.Total]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+        </DataBand>
+        <GroupFooterBand Name="GroupFooter2" Top="139.52" Width="756" Height="18.9">
+          <TextObject Name="Text11" Left="633.15" Width="113.4" Height="18.9" Text="[TotalCategoria]" HorzAlign="Right" Font="Arial, 10pt">
+            <Formats>
+              <CurrencyFormat/>
+              <GeneralFormat/>
+            </Formats>
+          </TextObject>
+          <TextObject Name="Text14" Left="18.9" Width="604.8" Height="18.9" Text="Total  -----------------------------------------------------------------------------------------------------------------------------------------------------------------" Font="Arial, 10pt"/>
+        </GroupFooterBand>
+      </GroupHeaderBand>
+      <GroupFooterBand Name="GroupFooter1" Top="161.75" Width="756" Height="18.9">
+        <TextObject Name="Text12" Left="633.15" Width="113.4" Height="18.9" Text="[TotalConta]" HorzAlign="Right" Font="Arial, 10pt, style=Bold">
+          <Formats>
+            <CurrencyFormat/>
+            <GeneralFormat/>
+          </Formats>
+        </TextObject>
+        <TextObject Name="Text13" Width="274.05" Height="18.9" Text="Total [despesaContaCategoriaDetalhe.Conta]" Font="Arial, 10pt, style=Bold"/>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+    <DataBand Name="Data2" Top="183.98" Width="756" Height="18.9" DataSource="despesaContaCategoria">
+      <TextObject Name="Text16" Left="56.7" Width="94.5" Height="18.9" Text="[despesaContaCategoria.Conta]" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="207.9" Width="94.5" Height="18.9" Text="[despesaContaCategoria.Conta]" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text18" Left="359.1" Width="94.5" Height="18.9" Text="[despesaContaCategoria.Total]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt, style=Bold" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="206.22" Width="756" Height="18.9">
+      <TextObject Name="Text15" Left="652.05" Width="94.5" Height="18.9" Text="[TotalGeral]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" Font="Arial, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
